@@ -1,0 +1,45 @@
+-
+  var features_list = [
+    {title: "App blocker", route: "features-appbrocker"}, 
+    {title: "Statistics", route: "features-statistics"}, 
+    {title: "Web control", route: "features-web"}, 
+    {title: "YouTube control", route: "features-youtube"}, 
+    {title: "Eye protection", route: "features-eye"}, 
+    {title: "Photo & Contacts", rotue: "features-photocontacts"}, 
+    {title: "Instant messenger", route: "features-messenger"},
+    {title: "SMS & Calls", route: "features-smscalls"}, {title: "Sounds", route: "features-sounds"},
+    {title: "Settings", route: "features-settings"}
+  ]
+
+header.h
+  .h-logo
+    img(src="./assets/static/logo-kroha.svg" alt="kroha")
+  nav.h-nav(data-menu-breakpoint="991")
+    a.h-nav-item._text-upper(href="#") pricing
+    .dd.h-nav-dd
+      .h-nav-dd-label
+        .h-nav-item._text-upper features
+        .h-nav-dd-arrow
+          <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L9 9L17 1" stroke="#434A57" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+      .dd-drop.h-nav-dd-drop._showDown
+        ul.dd-list.h-nav-dd-list
+          each item in features_list
+            li
+              a.h-nav-dd-list-item(href="./" + item.route + ".html")= item.title
+        a.btn.h-nav-dd-btn(href="./kroha-advanced.html")
+          .btn-icon
+            img(src="./assets/static/icon-kroha-advanced.svg", alt="kroha advanced")
+          .btn-text Kroha Advanced
+
+    a.h-nav-item._text-upper(href="#") blog
+    a.h-nav-item._text-upper(href="#") support
+    a.h-nav-item._text-upper(href="#") videos
+  .h-socbar
+    a.btn.h-socbar-btn(href="#" target="_blank")
+      img.h-socbar-btn-icon(src="./assets/static/icon-apple-black.svg", alt="appstore" )
+    a.btn.h-socbar-btn(href="#" target="_blank")
+      img.h-socbar-btn-icon(src="./assets/static/icon-google-play.svg", alt="google play")
+    a.btn.h-socbar-btn(href="#" target="_blank")
+      img.h-socbar-btn-icon(src="./assets/static/icon-huawei-app-gallery.svg", alt="app gallery")

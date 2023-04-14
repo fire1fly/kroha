@@ -1,12 +1,13 @@
 const menuClass = "h-nav";
 const menuTriggerClass = "h-menubtn";
 
-// const breakpoint = 
-
-const headerMediaQuery = window.matchMedia("(max-width: 1440px)");
-
 const menuEl = document.querySelector(`.${menuClass}`);
 const menuBtnEl = document.querySelector(`.${menuTriggerClass}`);
+
+const breakpoint = menuEl.dataset.menuBreakpoint || "991";
+
+const headerMediaQuery = window.matchMedia(`(max-width: ${breakpoint}px)`);
+
 
 function toggleMenu() {
   menuBtnEl.classList.toggle("active");

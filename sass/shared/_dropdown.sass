@@ -1,0 +1,46 @@
+.dd
+  position: relative
+  user-select: none
+  cursor: pointer
+  &.active
+    .dd-drop
+      visibility: visible
+      opacity: 1
+      transform: translateY(0)
+      z-index: 20
+  &-drop
+    visibility: hidden
+    opacity: 0
+    position: absolute
+    top: 100%
+    left: 0
+    z-index: -1
+    min-width: 100%
+    overflow: hidden
+    transition: 0.1s ease-in-out
+    &._showDown
+      transform: translateY(-5px)
+    &._showUp
+      transform: translateY(5px)
+    &._up
+      top: auto
+      bottom: calc(100% + 10px)
+  &-list
+    list-style: none
+    margin: 0
+    padding: 0
+  &._scrolled
+    .dd-drop
+      ul
+        margin: 0
+        padding: 0
+        list-style: none
+        padding-right: 10px
+        overflow-y: auto
+        &::-webkit-scrollbar-track
+          background-color: #E8EEF6
+      .dd-item
+        display: block
+        overflow: hidden
+        text-overflow: ellipsis
+        white-space: nowrap

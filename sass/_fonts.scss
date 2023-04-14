@@ -9,11 +9,6 @@
   font-display: swap;
 }
 
-@mixin opensans-reg {
-  font-family: 'Open Sans Regular';
-}
-
-
 @font-face {
   font-family: 'Open Sans Semibold';
   src: url('../assets/fonts/OpenSans-SemiBold.eot');
@@ -25,11 +20,6 @@
   font-display: swap;
 }
 
-@mixin opensans-semibold {
-  font-family: 'Open Sans Semibold';
-}
-
-
 @font-face {
   font-family: 'Open Sans Bold';
   src: url('../assets/fonts/OpenSans-Bold.eot');
@@ -39,10 +29,6 @@
   font-weight: normal;
   font-style: normal;
   font-display: swap;
-}
-
-@mixin opensans-bold {
-  font-family: 'Open Sans Bold';
 }
 
 @font-face {
@@ -56,10 +42,6 @@
   font-display: swap;
 }
 
-@mixin monts-reg {
-  font-family: 'Montserrat Alternates Regular';
-}
-
 @font-face {
   font-family: 'Montserrat Alternates Medium';
   src: url('../assets/fonts/MontserratAlternates-Medium.eot');
@@ -69,10 +51,6 @@
   font-weight: normal;
   font-style: normal;
   font-display: swap;
-}
-
-@mixin monts-med {
-  font-family: 'Montserrat Alternates Medium';
 }
 
 @font-face {
@@ -86,10 +64,6 @@
   font-display: swap;
 }
 
-@mixin monts-semibold {
-  font-family: 'Montserrat Alternates Semibold';
-}
-
 @font-face {
   font-family: 'Montserrat Alternates Bold';
   src: url('../assets/fonts/MontserratAlternates-Bold.eot');
@@ -99,8 +73,4 @@
   font-weight: normal;
   font-style: normal;
   font-display: swap;
-}
-
-@mixin monts-bold {
-  font-family: 'Montserrat Alternates Bold';
 }
