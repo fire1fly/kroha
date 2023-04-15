@@ -1,0 +1,57 @@
+- var socialList = ["facebook", "instagram", "twitter", "youtube"]
+
+footer.f(class=footerBg && "_bg")
+  if (footerTop)
+    .f-top
+      .f-container.f-top-row
+        .f-common
+          .f-logo
+            img(src="./assets/static/logo-kroha-2.svg", alt="kroha")
+          .f-soc
+            each item in socialList
+              a.f-soc-item(href="#")
+                img(src="./assets/static/icon-" + item + "-circle.svg", alt=item)
+          a.f-link(href="mailto:support@kidsfinder.net") support@kidsfinder.net
+        nav.f-nav.accordion
+          .f-nav-col.accordion-item
+            .f-nav-col-h.accordion-header
+              .f-nav-label Products
+              .f-nav-col-h-arrow
+                <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 0.561401L9 8.5614L17 0.561401" stroke="#838993" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            .f-nav-col-b.accordion-body
+              .accordion-content.f-nav-col-b__inner
+                a.f-nav-link(href="#") Android Parents APP
+                a.f-nav-link(href="#") IOS Parents APP
+                a.f-nav-link(href="#") Huawei Parents APP
+                a.f-nav-link(href="#") Android Child's APP
+                a.f-nav-link(href="#") IOS Child's APP
+                a.f-nav-link(href="#") Huawei Child's APP
+          .f-nav-col.accordion-item
+            .f-nav-col-h.accordion-header
+              .f-nav-label Products
+              .f-nav-col-h-arrow
+                <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 0.561401L9 8.5614L17 0.561401" stroke="#838993" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            .f-nav-col-b.accordion-body
+              .accordion-content.f-nav-col-b__inner
+                a.f-nav-link(href="#") Pricing
+                a.f-nav-link(href="#") Blog
+                a.f-nav-link(href="#") Support
+                a.f-nav-link(href="#") About
+          .f-nav-col.accordion-item
+            .f-nav-col-h.accordion-header
+              .f-nav-label Products
+              .f-nav-col-h-arrow
+                <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 0.561401L9 8.5614L17 0.561401" stroke="#838993" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            .f-nav-col-b.accordion-body
+              .accordion-content.f-nav-col-b__inner
+                a.f-nav-link(href="#") Privacy Policy
+                a.f-nav-link(href="#") Therms&Conditions
+  if (footerBottom)
+    .f-bottom
+      .f-container

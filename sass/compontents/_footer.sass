@@ -1,0 +1,67 @@
+.f
+  &._bg
+    +gradient-grey
+  &-container
+    margin: 0 auto
+    max-width: 1144px
+    width: 100%
+  &-top
+    padding: 50px 30px 40px
+    &-row
+      display: flex
+      gap: 30px
+  &-common
+    flex: 0 1 280px
+  &-logo
+    max-width: 218px
+    width: 100%
+    line-height: 0
+    img, svg
+      width: 100%
+  &-soc
+    margin-top: 30px
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    gap: 10px
+    &-item
+      flex: 0 0 auto
+      line-height: 0
+  &-link
+    margin-top: 20px
+    display: block
+    +opensans-reg
+    font-size: 18px
+    color: $darkgrey
+  &-nav
+    flex: 1 1 auto
+    display: flex
+    justify-content: space-between
+    gap: 30px
+    &-col
+      &-h
+        display: flex
+        align-items: center
+        justify-content: space-between
+        cursor: pointer
+        &-arrow
+          flex: 0 0 auto
+          display: none
+      &-b
+        &__inner
+          padding-top: 20px
+    &-label
+      +monts-med
+      font-size: 24px
+      color: $black
+    &-link
+      display: block
+      +opensans-reg
+      font-size: 18px
+      color: $darkgrey
+      &:not(:nth-of-type(1))
+        margin-top: 10px
+
+  &-bottom
+    border-top: 1px solid #C4CBD8
+    padding: 20px 30px 40px
