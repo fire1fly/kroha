@@ -64,12 +64,16 @@ function toggleMenu() {
   if (menuEl.classList.contains("active")) {
     menuBtnEl.classList.remove("active");
     elToActive.forEach(el => el.classList.remove("active"));
-    elToTransition.forEach(el => hide(el));
+    elToTransition.forEach(el => {
+      el && hide(el);
+    });
   } else {
     menuWrapper.style.height = `${menuWrapperHeight}px`;
     menuBtnEl.classList.add("active");
     elToActive.forEach(el => el.classList.add("active"));
-    elToTransition.forEach(el => show(el));
+    elToTransition.forEach(el => {
+      el && show(el);
+    });
 
   }
 
