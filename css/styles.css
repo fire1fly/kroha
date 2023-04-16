@@ -82,6 +82,10 @@ a {
   text-transform: uppercase;
 }
 
+.accordion-item:not(.accordion-item_show) .accordion-body {
+  display: none;
+}
+
 .btn {
   border: none;
   display: -webkit-box;
@@ -636,7 +640,17 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 30px;
+}
+.f-nav-col {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 30%;
+          flex: 0 1 30%;
+}
+.f-nav-col:not(.accordion-item_show) .accordion-body {
+  display: block;
 }
 .f-nav-col-h {
   display: -webkit-box;
@@ -668,6 +682,7 @@ a {
   display: block;
   font-family: "Open Sans Regular";
   font-size: 18px;
+  line-height: 1.4;
   color: #434A57;
 }
 .f-nav-link:not(:nth-of-type(1)) {
@@ -676,4 +691,70 @@ a {
 .f-bottom {
   border-top: 1px solid #C4CBD8;
   padding: 20px 30px 40px;
+}
+
+@media (max-width: 991px) {
+  .f-top-row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+  }
+  .f-common {
+    -webkit-box-flex: 1;
+        -ms-flex: auto;
+            flex: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .f-soc {
+    margin-top: 20px;
+  }
+  .f-nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0;
+  }
+  .f-nav-col {
+    -webkit-box-flex: 1;
+        -ms-flex: auto;
+            flex: auto;
+    margin-top: 10px;
+    border-top: 1px solid #C4CBD8;
+    width: 100%;
+  }
+  .f-nav-col:not(.accordion-item_show) .accordion-body {
+    display: none;
+  }
+  .f-nav-col-h {
+    padding: 20px 0 10px;
+  }
+  .f-nav-col-h-arrow {
+    display: block;
+  }
+}
+@media (max-width: 520px) {
+  .f-top {
+    padding: 20px 30px 10px;
+  }
+  .f-link {
+    font-size: 16px;
+  }
+  .f-nav-label {
+    font-size: 18px;
+  }
+  .f-nav-link {
+    font-size: 16px;
+  }
 }/*# sourceMappingURL=styles.css.map */

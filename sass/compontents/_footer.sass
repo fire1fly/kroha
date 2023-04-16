@@ -37,8 +37,13 @@
     flex: 1 1 auto
     display: flex
     justify-content: space-between
+    flex-wrap: wrap
     gap: 30px
     &-col
+      flex: 0 1 30%
+      &:not(.accordion-item_show)
+        .accordion-body
+          display: block
       &-h
         display: flex
         align-items: center
@@ -58,10 +63,51 @@
       display: block
       +opensans-reg
       font-size: 18px
+      line-height: 1.4
       color: $darkgrey
       &:not(:nth-of-type(1))
         margin-top: 10px
-
   &-bottom
     border-top: 1px solid #C4CBD8
     padding: 20px 30px 40px
+
+@media ( max-width: 991px )
+  .f
+    &-top
+      &-row
+        flex-direction: column
+        gap: 20px
+    &-common
+      flex: auto
+      display: flex
+      flex-direction: column
+      align-items: center
+    &-soc
+      margin-top: 20px
+    &-nav
+      flex-direction: column
+      gap: 0
+      &-col
+        flex: auto
+        margin-top: 10px
+        border-top: 1px solid #C4CBD8
+        width: 100%
+        &:not(.accordion-item_show)
+          .accordion-body
+            display: none
+        &-h
+          padding: 20px 0 10px
+          &-arrow
+            display: block
+
+@media ( max-width: 520px )
+  .f
+    &-top
+      padding: 20px 30px 10px
+    &-link
+      font-size: 16px
+    &-nav
+      &-label
+        font-size: 18px
+      &-link
+        font-size: 16px
