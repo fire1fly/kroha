@@ -1,4 +1,11 @@
 - var socialList = ["facebook", "instagram", "twitter", "youtube"]
+-
+  var languagesList = [
+    {label: "English", value: "uk"},
+    {label: "Українська", value: "ua"},
+    {label: "Қазақша", value: "kz"},
+    {label: "עברית", value: "he"},
+  ]
 
 footer.f(class=footerBg && "_bg")
   if (footerTop)
@@ -54,4 +61,22 @@ footer.f(class=footerBg && "_bg")
                 a.f-nav-link(href="#") Therms&Conditions
   if (footerBottom)
     .f-bottom
-      .f-container
+      .f-container.f-bottom-row
+        .f-copy Copyright © 2023 Apple Inc. All rights reserved.
+        .f-lang.dd.select
+          input.dd-input(type="hidden" value="uk")
+          .f-lang-item.selected
+            .f-lang-item-icon
+              img(src="./assets/static/icon-flag-uk.svg", alt="uk")
+            .f-lang-item-label English
+          .f-lang-arrow
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 8.66113L12 15.6611L19 8.66113" stroke="#0F1622" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          ul.f-lang-list.dd-drop.dd-list._showUp._up
+            each item in languagesList
+              li
+                .f-lang-item.dd-item(data-value= item.value)
+                  .f-lang-item-icon
+                    img(src="./assets/static/icon-flag-" + item.value + ".svg", alt=item.label)
+                  .f-lang-item-label= item.label

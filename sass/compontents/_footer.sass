@@ -70,6 +70,58 @@
   &-bottom
     border-top: 1px solid #C4CBD8
     padding: 20px 30px 40px
+    &-row
+      display: flex
+      align-items: center
+      justify-content: space-between
+      .f-lang
+        flex: 0 0 auto
+  &-copy
+    +opensans-reg
+    font-size: 18px
+    line-height: 1.3
+    color: $darkgrey
+  &-lang
+    border-radius: 6px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 10px
+    padding: 10px 15px
+    background-color: $white
+    cursor: pointer
+    &.active
+      .f-lang-arrow
+        transform: scale(1, -1 )
+    &-item
+      display: flex
+      align-items: center
+      gap: 10px
+      &-icon
+        flex: 0 0 auto
+        line-height: 0
+        img
+          width: 30px
+      &-label
+        +opensans-reg
+        font-size: 18px
+        line-height: 1.3
+        color: $black
+    &-arrow
+      flex: 0 0 auto
+      line-height: 0
+      +transition(transform, 0.3s)
+    &-list
+      left: auto
+      right: 0
+      border-radius: 6px
+      background-color: $white
+      box-shadow: 0px 15px 30px rgba(26, 25, 37, 0.25)
+      .f-lang-item
+        padding: 10px 15px
+        +transition(background-color, 0.1s)
+        &:hover
+          background-color: darken($white, 3%)
 
 @media ( max-width: 991px )
   .f
@@ -111,3 +163,14 @@
         font-size: 18px
       &-link
         font-size: 16px
+    &-bottom
+      padding: 20px 20px 30px
+      &-row
+        flex-direction: column
+        .f-lang
+          margin-top: 10px
+          flex: auto
+    &-copy
+      font-size: 14px
+    &-lang
+      width: 100%
