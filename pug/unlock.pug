@@ -1,0 +1,22 @@
+extends ./layouts/_common.pug
+
+block variables
+  -
+    var pageTitle = 'Unlock'
+    var pageModificator = "page-fullscreen"
+
+block prepend scripts
+  script(src="./js/swiper-bundle.min.js")
+
+block header
+  - var headerBordered = true
+  include ./components/header/_header2.pug
+block content
+  main.main.punlock
+    h1.punlock-title Unlock device
+    .punlock-desc.punlock-text To unlock device please disable all restrictions
+    button.btn.btn-primary-rounded._text-upper.punlock-btn(type="button") DISABLE ALL RESTRICTIONS
+    a.punlock-outlink.punlock-text._text-upper(href="#") disconnect device
+block footer
+  - var footerBottom = true
+  include ./components/footer/_footer.pug
