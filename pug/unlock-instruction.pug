@@ -1,0 +1,52 @@
+extends ./layouts/_common.pug
+
+block variables
+  -
+    var pageTitle = 'Unlock instruction'
+    var pageModificator = "page-fullscreen"
+
+block prepend scripts
+  script(src="./js/swiper-bundle.min.js")
+
+block header
+  - var headerBordered = true
+  include ./components/header/_header2.pug
+block content
+  main.main.punlock
+    .punlock-instr
+      h1.punlock-instr-title To complete installation, follow these steps:
+      .punlock-instr-grid
+        .punlock-instr-item
+          .num 1.
+          .text
+            .
+              Close the application <em>"Parental Control Kroha"</em> and open the application <em>"Settings"</em>
+        .punlock-instr-item
+          .num 2.
+          .text
+            .
+              In the application <em>"Settings"</em>, go to the section <em>"Profile downloaded"</em> . 
+              (If you did not find this section, then follow these steps: <em>"General" -> "VPN & Device management" -> "Parental Control Kroha MDM"</em>)
+        .punlock-instr-item
+          .num 3.
+          .text
+            .
+              Сlick the button <em>"Install"</em> to start installing the profile
+        .punlock-instr-item
+          .num 4.
+          .text
+            .
+              Click the button <em>"Trust"</em> to complete the profile installation
+        .punlock-instr-item
+          .num 5.
+          .text
+            .
+              After the profile is installed, click the button <em>"Finish"</em>
+        .punlock-instr-item
+          .num 6.
+          .text
+            .
+              Return to the application <em>"Parental Control Kroha"</em>
+block footer
+  - var footerBottom = true
+  include ./components/footer/_footer.pug
