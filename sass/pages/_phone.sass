@@ -28,3 +28,29 @@
       left: 0
       height: 30px
       width: 100%
+  &-topbar
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 5px
+    &-btn
+      flex: 0 0 auto
+      width: 44px
+      height: 44px
+      display: flex
+      align-items: center
+      justify-content: center
+      cursor: pointer
+      img, svg
+        max-width: 100%
+        max-height: 100%
+    &-center
+      display: flex
+      justify-content: center
+      align-items: center
+    &-title
+      text-align: center
+      +monts-reg
+      font-size: 18px
+      line-height: 1.2
+      color: $black
