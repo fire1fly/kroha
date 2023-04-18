@@ -1,0 +1,31 @@
+extends ./layouts/_phone-mockup.pug
+
+block variables
+  -
+    var pageTitle = "iphone signin"
+
+block append scripts
+  script(defer src="./js/temp_form.js") 
+
+block content
+  .pph._white
+    img.pph-mockup-topbar(src="./assets/static/mockup-phone-topbar.svg", alt="topbar")
+    .phsgn
+      .phsgn-h
+        .phsgn-h-logo
+          img(src="./assets/static/logo-kroha-lock.svg", alt="kroha")
+        h1.phsgn-title Вход
+      form.phsgn-form(action="#")
+        .input2-wrapper.phsgn-form-block
+          .input2-field
+            input.input2.active(type="text")
+            label.input2-label E-mail
+        .input2-wrapper.phsgn-form-block
+          .input2-field
+            input.input2(type="password")
+            label.input2-label Пароль
+        a.phsgn-text._mx-20._text-center._text-primary(href="#") Забыли пароль?
+        button.btn.btn-primary.phsgn-btn(type="button") Войти
+        .phsgn-text._mx-30._text-center(href="#")
+            span Ещё нет аккаунта? 
+            a._text-primary(href="#") Регистрация
