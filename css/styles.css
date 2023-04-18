@@ -114,6 +114,32 @@ input, textarea {
   margin-bottom: 30px;
 }
 
+._mt-10 {
+  margin-top: 10px;
+}
+._mt-15 {
+  margin-top: 15px;
+}
+._mt-20 {
+  margin-top: 20px;
+}
+._mt-30 {
+  margin-top: 30px;
+}
+
+._mb-10 {
+  margin-bottom: 10px;
+}
+._mb-15 {
+  margin-bottom: 15px;
+}
+._mb-20 {
+  margin-bottom: 20px;
+}
+._mb-30 {
+  margin-bottom: 30px;
+}
+
 .accordion-item:not(.accordion-item_show) .accordion-body {
   display: none;
 }
@@ -314,18 +340,9 @@ input, textarea {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 .phsgn-form-block {
+  display: block;
   width: 100%;
 }
 .phsgn-form-block:not(._error):not(.phsgn-form-block:not(._error):nth-last-of-type(1)) {
@@ -1067,7 +1084,7 @@ input, textarea {
   height: 812px;
 }
 .pph-mockup__wrapper {
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   padding: 30px;
   display: -webkit-box;
