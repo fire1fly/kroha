@@ -110,3 +110,47 @@
         align-self: center
       &-bottom
         align-self: end
+  &-botbar
+    position: absolute
+    bottom: 0
+    left: 0
+    border-bottom-left-radius: 20px
+    border-bottom-right-radius: 20px
+    width: 100%
+    padding: 12px 20px
+    background-color: $white
+    &-row
+      display: flex
+      align-items: center
+      justify-content: space-between
+      gap: 5px
+    &-item
+      cursor: pointer
+      &._active, &:hover
+        ._active
+          &-stroke
+            stroke: $primary
+          &-fill
+            fill: $primary
+        .pph-botbar-item
+          &-label
+            color: $primary
+      &-icon
+        margin: 0 auto
+        width: 24px
+        height: 24px
+        img, svg
+          max-width: 100%
+          max-height: 100%
+        ._active
+          &-stroke
+            +transition(stroke, 0.2s)
+          &-fill
+            +transition(fill, 0.2s)
+      &-label
+        text-align: center
+        +opensans-reg
+        font-size: 10px
+        line-height: 1.3
+        color: $grey
+        +transition(color, 0.2s)
