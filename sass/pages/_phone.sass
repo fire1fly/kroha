@@ -54,3 +54,34 @@
       font-size: 18px
       line-height: 1.2
       color: $black
+  &-text
+    +opensans-reg
+    font-size: 16px
+    &._bold
+      +opensans-semibold
+    ._bold
+      +opensans-semibold
+  &-box
+    border-radius: 10px
+    background-color: $white
+    &-feed
+      display: flex
+      flex-direction: column
+      .pph
+        &-box
+          &:not(:nth-of-type(1))
+            margin-top: 4px
+  &-chapter
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 10px
+    &-icon
+      flex: 0 0 24px
+      width: 24px
+      height: 24px
+      img, svg
+        max-width: 100%
+        max-height: 100%
+    &-label
+      flex: 1 1 auto

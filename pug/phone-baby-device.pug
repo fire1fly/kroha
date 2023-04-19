@@ -1,0 +1,64 @@
+extends ./layouts/_phone-mockup.pug
+
+block variables
+  -
+    var pageTitle = "iphone password recovery"
+
+block append scripts
+  script(defer src="./js/temp_form.js")
+
+block content
+  .pph._light-blue
+    img.pph-mockup-topbar(src="./assets/static/mockup-phone-topbar.svg", alt="topbar")
+    .pph-topbar._mb-20
+      .pph-topbar-btn
+        img(src="./assets/static/icon-arrow-left-primary.svg", alt="back")
+      .pph-topbar-center
+        .pph-topbar-title Parental Control
+      .pph-topbar-btn
+        img(src="./assets/static/icon-settings-primary.svg", alt="settings")
+    .ctab
+      .ctab-item
+        .ctab-item-icon
+        img(src="./assets/static/icon-parent.svg", alt="parent")
+        .ctab-item-label Я родитель
+      .ctab-item.active
+        .ctab-item-icon
+        img(src="./assets/static/icon-child.svg", alt="child")
+        .ctab-item-label Я ребенок
+    .pph-box-feed._mt-20
+      a.pph-box._py-20._px-10(href="#") 
+        .pph-chapter
+          .pph-chapter-icon
+            img(src="./assets/static/icon-clock.svg", alt="clock")
+          .pph-chapter-label.pph-text На данный момент нет данных о времени использования прилоложениями
+          .pph-chapter-icon
+            img(src="./assets/static/icon-arrow-right-grey.svg", alt="go")
+      a.pph-box._py-20._px-10(href="#") 
+        .pph-chapter
+          .pph-chapter-icon
+            img(src="./assets/static/icon-game-controller.svg", alt="clock")
+          .pph-chapter-label.pph-text
+            span._bold Игры 
+            span._text-grey (9)
+          .pph-chapter-icon
+            img(src="./assets/static/icon-arrow-right-grey.svg", alt="go")
+        .prg._mt-20
+          .prg-h._mb-10
+            .prg-label._start
+              span._text-darkrey Осталось 
+              span._text-primary 30 мин
+            .prg-label._end
+              span._text-darkrey Лимит 
+              span._text-primary 15 мин
+          .prg-line
+            .prg-progress(style="width: 50%")
+      a.pph-box._py-20._px-10(href="#") 
+        .pph-chapter
+          .pph-chapter-icon
+            img(src="./assets/static/icon-close-circle.svg", alt="close")
+          .pph-chapter-label.pph-text
+            span._bold Всегда заблокированные 
+            span._text-grey (0)
+          .pph-chapter-icon
+            img(src="./assets/static/icon-arrow-right-grey.svg", alt="go")

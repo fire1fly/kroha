@@ -96,20 +96,29 @@ input, textarea {
 ._text-primary {
   color: #0876E4;
 }
+._text-black {
+  color: #0F1622;
+}
+._text-grey {
+  color: #838993;
+}
+._text-darkgrey {
+  color: #434A57;
+}
 
-._mx-10 {
+._my-10 {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-._mx-15 {
+._my-15 {
   margin-top: 15px;
   margin-bottom: 15px;
 }
-._mx-20 {
+._my-20 {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-._mx-30 {
+._my-30 {
   margin-top: 30px;
   margin-bottom: 30px;
 }
@@ -138,6 +147,40 @@ input, textarea {
 }
 ._mb-30 {
   margin-bottom: 30px;
+}
+
+._py-10 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+._py-15 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+._py-20 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+._py-30 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+._px-10 {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+._px-15 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+._px-20 {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+._px-30 {
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .accordion-item:not(.accordion-item_show) .accordion-body {
@@ -1115,6 +1158,45 @@ input, textarea {
   transition: color 0.3s ease-in-out 0s;
 }
 
+.prg {
+  width: 100%;
+}
+.prg-h {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 10px;
+}
+.prg-label {
+  font-family: "Open Sans Regular";
+  font-size: 14px;
+  line-height: 1.4;
+}
+.prg-label._start {
+  text-align: left;
+}
+.prg-label._end {
+  text-align: right;
+}
+.prg-line {
+  border-radius: 2px;
+  width: 100%;
+  height: 4px;
+  overflow: hidden;
+  background-color: #EDEDF3;
+}
+.prg-progress {
+  border-radius: 2px;
+  height: 100%;
+  background-color: #0876E4;
+}
+
 .pph {
   position: relative;
   border-radius: 20px;
@@ -1208,6 +1290,60 @@ input, textarea {
   font-size: 18px;
   line-height: 1.2;
   color: #0F1622;
+}
+.pph-text {
+  font-family: "Open Sans Regular";
+  font-size: 16px;
+}
+.pph-text._bold {
+  font-family: "Open Sans Semibold";
+}
+.pph-text ._bold {
+  font-family: "Open Sans Semibold";
+}
+.pph-box {
+  border-radius: 10px;
+  background-color: #FFFFFF;
+}
+.pph-box-feed {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.pph-box-feed .pph-box:not(:nth-of-type(1)) {
+  margin-top: 4px;
+}
+.pph-chapter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 10px;
+}
+.pph-chapter-icon {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 24px;
+          flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+}
+.pph-chapter-icon img, .pph-chapter-icon svg {
+  max-width: 100%;
+  max-height: 100%;
+}
+.pph-chapter-label {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 
 .punlock {
