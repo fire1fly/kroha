@@ -1,0 +1,35 @@
+extends ./layouts/_phone-mockup.pug
+
+block variables
+  -
+    var pageTitle = "iphone password recovery"
+
+block append scripts
+  script(defer src="./js/temp_form.js")
+
+block content
+  .pph._light-blue
+    img.pph-mockup-topbar(src="./assets/static/mockup-phone-topbar.svg", alt="topbar")
+    .pph-topbar._mb-10
+      .pph-topbar-btn
+        img(src="./assets/static/icon-arrow-left-primary.svg", alt="back")
+      .pph-topbar-center
+        .pph-topbar-title Всегда заблокрованые
+      .pph-topbar-btn
+    .pph-subtext._text-center._text-darkgrey._my-10 Доступ к этим приложениям заблокирован:
+    .pph-box-feed
+      .pph-box._py-10._px-15
+        .pph-grid._type-1
+          .pph-preview-small
+            img(src="./assets/static/game-logo-angrybirds.png", alt="angry birds")
+          .pph-text._text-darkgrey._align-center Angry Birds Friends - Arcade
+      .pph-box._py-10._px-15
+        .pph-grid._type-1
+          .pph-preview-small
+            img(src="./assets/static/game-logo-badpiggies.png", alt="bad piggies")
+          .pph-text._text-darkgrey._align-center Bad Piggies HD
+      .pph-box._py-10._px-15
+        .pph-grid._type-1
+          .pph-preview-small
+            img(src="./assets/static/game-logo-supermario.png", alt="super mario")
+          .pph-text._text-darkgrey._align-center Super Mario Run
