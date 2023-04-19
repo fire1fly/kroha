@@ -22,9 +22,12 @@
     &-block
       display: block
       width: 100%
-      &:not(._error)
-        &:not(&:nth-last-of-type(1))
+      .input2-field
+        &:not(.error)
           margin-bottom: 30px
+        &.error
+          & + .input2-output
+            margin-bottom: 12px
   &-text
     +opensans-reg
     font-size: 16px

@@ -23,6 +23,13 @@
         transform: translate(-8px, 4px) scale(0.6)
         +opensans-bold
         color: $primary
+    &.error
+      border: 1px solid $red
+      .input2
+        &-label
+          color: $red
+      & + .input2-output
+        color: $red
   &-label
     position: absolute
     z-index: 1
@@ -33,4 +40,9 @@
     +opensans-reg
     font-size: 16px
     color: $darkgrey
-    &.active
+  &-output
+    text-align: right
+    +opensans-reg
+    font-size: 12px
+    line-height: 1.3
+    color: $black
