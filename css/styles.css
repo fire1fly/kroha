@@ -106,6 +106,10 @@ input, textarea {
   color: #434A57;
 }
 
+._bg-red {
+  background-color: #FB668A;
+}
+
 ._my-10 {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -1217,6 +1221,38 @@ input, textarea {
   background-color: #0876E4;
 }
 
+.cal table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+}
+.cal table thead th {
+  padding-bottom: 10px;
+}
+.cal-th {
+  text-align: center;
+  font-weight: normal;
+  font-family: "Open Sans Regular";
+  font-size: 14px;
+  line-height: 1.3;
+  color: #838993;
+}
+.cal td {
+  height: 32px;
+}
+.cal-cell {
+  border-radius: 3px;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+  padding: 5px 6px;
+  background-color: #FFFFFF;
+}
+.cal-mark {
+  border-radius: 3px;
+  width: 100%;
+  height: 100%;
+}
+
 .pph {
   position: relative;
   border-radius: 20px;
@@ -1399,6 +1435,69 @@ input, textarea {
 .pph-grid ._align-bottom {
   -ms-flex-item-align: end;
       align-self: end;
+}
+.pph-botbar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  width: 100%;
+  padding: 12px 20px;
+  background-color: #FFFFFF;
+}
+.pph-botbar-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 5px;
+}
+.pph-botbar-item {
+  cursor: pointer;
+}
+.pph-botbar-item._active ._active-stroke, .pph-botbar-item:hover ._active-stroke {
+  stroke: #0876E4;
+}
+.pph-botbar-item._active ._active-fill, .pph-botbar-item:hover ._active-fill {
+  fill: #0876E4;
+}
+.pph-botbar-item._active .pph-botbar-item-label, .pph-botbar-item:hover .pph-botbar-item-label {
+  color: #0876E4;
+}
+.pph-botbar-item-icon {
+  margin: 0 auto;
+  width: 24px;
+  height: 24px;
+}
+.pph-botbar-item-icon img, .pph-botbar-item-icon svg {
+  max-width: 100%;
+  max-height: 100%;
+}
+.pph-botbar-item-icon ._active-stroke {
+  -webkit-transition: stroke 0.2s ease-in-out 0s;
+  -o-transition: stroke 0.2s ease-in-out 0s;
+  transition: stroke 0.2s ease-in-out 0s;
+}
+.pph-botbar-item-icon ._active-fill {
+  -webkit-transition: fill 0.2s ease-in-out 0s;
+  -o-transition: fill 0.2s ease-in-out 0s;
+  transition: fill 0.2s ease-in-out 0s;
+}
+.pph-botbar-item-label {
+  text-align: center;
+  font-family: "Open Sans Regular";
+  font-size: 10px;
+  line-height: 1.3;
+  color: #838993;
+  -webkit-transition: color 0.2s ease-in-out 0s;
+  -o-transition: color 0.2s ease-in-out 0s;
+  transition: color 0.2s ease-in-out 0s;
 }
 
 .punlock {
