@@ -6,6 +6,7 @@
   cursor: pointer
   &-icon
     flex: 0 0 auto
+    line-height: 0
   &-primary
     border-radius: 10px
     height: 60px
@@ -24,9 +25,51 @@
       cursor: not-allowed
     &._rounded
       border-radius: 30px
+  &-play
+    position: relative
+    border-radius: 30px
+    flex: 0 0 auto
+    width: 60px
+    height: 60px
+    background-color: $white
+    +transition(background-color, 0.2s)
+    &:hover
+      background-color: darken($white, 3%)
+    &-circle
+      position: absolute
+      top: 0
+      left: 0
+      border: 1px solid #053D75
+      border-radius: 30px
+      width: 100%
+      height: 100%
+      opacity: 0
+      &._1
+        animation: bubble 2s linear 0s infinite normal backwards
+      &._2
+        animation: bubble 2s linear 1s infinite normal backwards
+      &._3
+        animation: bubble 2s linear 2s infinite normal backwards
+
+@keyframes bubble
+  0%
+    transform: scale(1.1)
+    opacity: 0.2
+  33%
+    transform: scale(1.6)
+    opacity: 0.1
+  66%
+    transform: scale(2.1)
+    opacity: 0.05
+  100%
+    transform: scale(2.6)
+    opacity: 0
 
 @media ( max-width: 520px )
   .btn
     &-primary
-      &-rounded
-        font-size: 14px
+      height: 50px
+      font-size: 14px
+    &-play
+      width: 50px
+      height: 50px

@@ -1,7 +1,13 @@
 extends ./layouts/_common.pug
 
 block variables
-  - var pageTitle = 'Main'
+  -
+    var pageTitle = 'Main'
+    var firstScreen = true
+    var firstScreenClass = "mp-fs"
+    var footerTop = true
+    var footerBottom = true
+    var footerBg = true
 
 block prepend scripts
   script(src="./js/swiper-bundle.min.js")
@@ -9,10 +15,44 @@ block prepend scripts
 
 block header
   include ./components/header/_header.pug
+block firstScreen
+  .fs
+    .fs-inner
+      h1.fs-title Maximum <br> <em>care</em> about your <br> a child
+      .fs-rowlist._mt-30._sm-mt-20
+        .fs-rowlist-item.fs-text Protection
+        .fs-rowlist-sep •
+        .fs-rowlist-item.fs-text Security
+        .fs-rowlist-sep •
+        .fs-rowlist-item.fs-text Control
+      .fs-btnbar._mt-30._sm-mt-20
+        button.btn.btn-primary._rounded._text-upper.fs-btn(type="button") Renew license
+        button.btn.btn-play(type="button")
+          .btn-play-circle._1
+          .btn-play-circle._2
+          .btn-play-circle._3
+          .btn-icon
+            img(src="./assets/static/icon-play-primary.svg", alt="play")
+      .fs-socbar.fs__socbar
+        a.btn.fs-socbar-btn(href="#") 
+          .btn-icon
+            picture
+              source(media="(min-width: 520px)", srcset="./assets/static/icon-google-play-label.svg")
+              source(media="(min-width: 0px)", srcset="./assets/static/icon-google-play.svg")
+              img(src="./assets/static/icon-google-play-label.svg", alt="Google Play")
+        a.btn.fs-socbar-btn(href="#") 
+          .btn-icon
+            picture
+              source(media="(min-width: 520px)", srcset="./assets/static/icon-apple-black-label.svg")
+              source(media="(min-width: 0px)", srcset="./assets/static/icon-apple-black.svg")
+              img(src="./assets/static/icon-apple-black-label.svg", alt="Google Play")
+        a.btn.fs-socbar-btn(href="#") 
+          .btn-icon
+            picture
+              source(media="(min-width: 520px)", srcset="./assets/static/icon-huawei-app-gallery-label.svg")
+              source(media="(min-width: 0px)", srcset="./assets/static/icon-huawei-app-gallery.svg")
+              img(src="./assets/static/icon-huawei-app-gallery-label.svg", alt="Google Play")
 block content
   main.main
 block footer
-  - var footerTop = true
-  - var footerBottom = true
-  - var footerBg = true
   include ./components/footer/_footer.pug

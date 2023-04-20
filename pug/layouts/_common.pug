@@ -20,6 +20,11 @@ html(lang="en")
   body
     #root
       .page(class=pageModificator)
-        block header
+        if (firstScreen)
+          .fs-wrapper(class=firstScreenClass)
+            block header
+            block firstScreen
+        else
+          block header
         block content
         block footer

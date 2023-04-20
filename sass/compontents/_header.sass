@@ -132,13 +132,16 @@
     &.active
       height: 100%
       .h__inner
-        position: absolute
+        position: fixed
         top: 0
         left: 0
         width: 100%
+        height: 100vh
+        overflow-y: auto
+        grid-template-rows: min-content min-content
     &__inner
       position: relative
-      z-index: 2
+      z-index: 20
       gap: 30px
       display: grid
       grid-template-columns: min-content 1fr min-content
@@ -229,7 +232,7 @@
       position: fixed
       top: 0
       left: 0
-      z-index: 1
+      z-index: -1
       width: 100%
       height: 100%
       background-image: url("../assets/static/header-backdrop-bg.svg")
@@ -239,12 +242,17 @@
       &.active
         opacity: 1
         visibility: visible
+        z-index: 19
     &-sidebar
       grid-column: 3/4
       grid-row: 1/2
 
 @media ( max-width: 520px )
   .h
+    &.active
+      .h__inner
+        min-height: 100vh
+        grid-template-rows: auto auto 1fr
     &__inner
       padding: 20px
     &-logo
@@ -254,6 +262,7 @@
       &-item
         font-size: 24px
     &-socbar
+      align-self: end
       grid-column: 1/4
       grid-row: 3/4
       display: none
