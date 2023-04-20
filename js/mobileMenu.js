@@ -31,7 +31,6 @@ function show(el) {
   }, 0);
   window.setTimeout(() => {
     el.classList.remove('collapsing');
-    // el.classList.remove('accordion__item_slidedown');
     el.classList.add('show');
     el.style.display = '';
     el.style.opacity = '';
@@ -45,14 +44,14 @@ function hide(el) {
   }
   el.style.opacity = 1;
   el.style.display = 'flex';
-  el.style.opacity = 0;
   el.style.transition = `opacity ${duration}ms ease-in-out`;
-  // el.classList.remove('collapse');
   el.classList.remove('show');
   el.classList.add('collapsing');
   window.setTimeout(() => {
+    el.style.opacity = 0;
+  }, 0);
+  window.setTimeout(() => {
     el.classList.remove('collapsing');
-    // el.classList.add('collapse');
     el.style.display = '';
     el.style.opacity = '';
     el.style.transition = '';
@@ -63,6 +62,7 @@ function toggleMenu() {
 
   if (menuEl.classList.contains("active")) {
     menuBtnEl.classList.remove("active");
+    document.body.classList.remove("_scroll-lock-y");
     elToActive.forEach(el => el.classList.remove("active"));
     elToTransition.forEach(el => {
       el && hide(el);
@@ -70,6 +70,7 @@ function toggleMenu() {
   } else {
     menuWrapper.style.height = `${menuWrapperHeight}px`;
     menuBtnEl.classList.add("active");
+    document.body.classList.add("_scroll-lock-y");
     elToActive.forEach(el => el.classList.add("active"));
     elToTransition.forEach(el => {
       el && show(el);
@@ -79,6 +80,7 @@ function toggleMenu() {
 
 }
 
+// not used
 function handleOutsideClick(e) {
   const menu = e.target.closest(`.${menuClass}`);
   const btn = e.target.closest(`.${menuTriggerClass}`);
@@ -94,7 +96,6 @@ function handleOutsideClick(e) {
 function initMenu() {
   console.log("init header menu");
   menuBtnEl && menuBtnEl.addEventListener("click", toggleMenu);
-  document.addEventListener("click", handleOutsideClick);
 }
 
 function resetMenu() {
