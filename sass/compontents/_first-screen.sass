@@ -1,5 +1,6 @@
 .fs
   padding-bottom: 60px
+  display: flex
   &-wrapper
     position: relative
     overflow: hidden
@@ -8,12 +9,15 @@
     background-repeat: no-repeat
     background-size: cover
     background-position: center center
+    .h
+      position: relative
+      z-index: 5
   &-inner
-    position: relative
-    z-index: 2
     padding-top: 150px
     padding-left: 150px
   &-title
+    position: relative
+    z-index: 4
     margin: 0
     +monts-reg
     font-size: 48px
@@ -27,6 +31,8 @@
     font-size: 18px
     color: $darkgrey
   &-rowlist
+    position: relative
+    z-index: 4
     display: flex
     align-items: center
     flex-wrap: wrap
@@ -35,6 +41,8 @@
       flex: 0 0 auto
       color: $primary
   &-btnbar
+    position: relative
+    z-index: 4
     display: flex
     align-items: center
     gap: 30px
@@ -45,6 +53,8 @@
   &__socbar
     margin-top: 180px
   &-socbar
+    position: relative
+    z-index: 4
     display: flex
     align-items: center
     gap: 20px
@@ -59,12 +69,216 @@
       img, svg
         max-width: 100%
         max-height: 100%
+  &-space
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    &-sun
+      position: absolute
+      bottom: 0
+      right: 0
+      &::after
+        content: ''
+        position: absolute
+        bottom: 0
+        right: 0
+        width: 1px
+        height: 1px
+        box-shadow: 0px 0px 600px 300px rgba(#F8B22C, 0.2)
+        animation: sunGlow 2s ease-in 0s infinite normal forwards
+    &-orbital
+      position: absolute
+      z-index: 1
+      right: 0
+      bottom: 0
+      transform: translate(50%, 60%)
+      z-index: 1
+      line-height: 0
+      &-1
+        &-item
+          &-1
+            position: absolute
+            right: 250px
+            bottom: 150px
+            z-index: 3
+            transform: rotate(-140deg)
+            offset-path: path("M0,450a450,450 0 1,0 900,0a450,450 0 1,0 -900,0")
+            offset-distance: 100%
+            animation: fsOrbitalRotate_100_60 6s linear 1.5s infinite normal forwards
+          &-2
+            position: absolute
+            right: 300px
+            bottom: 200px
+            z-index: 3
+            transform: rotate(-140deg)
+            offset-path: path("M0,450a450,450 0 1,0 900,0a450,450 0 1,0 -900,0")
+            offset-distance: 80%
+            animation: fsOrbitalRotate_100_60 6s linear infinite normal forwards
+      &-2
+        &-item
+          &-1
+            position: absolute
+            right: 430px
+            bottom: 310px
+            z-index: 3
+            transform: rotate(-160deg)
+            offset-path: path("M0,600a600,600 0 1,0 1200,0a600,600 0 1,0 -1200,0")
+            offset-distance: 60%
+            animation: fsOrbitalRotate_60_100 5s linear 2.5s infinite normal forwards
+          &-2
+            position: absolute
+            right: 490px
+            bottom: 370px
+            z-index: 3
+            offset-path: path("M0,600a600,600 0 1,0 1200,0a600,600 0 1,0 -1200,0")
+            offset-distance: 60%
+            animation: fsOrbitalRotate_60_100 5s linear 0.5s infinite normal forwards
+          &-3
+            position: absolute
+            right: 590px
+            bottom: 460px
+            z-index: 3
+            offset-path: path("M0,600a600,600 0 1,0 1200,0a600,600 0 1,0 -1200,0")
+            offset-distance: 60%
+            animation: fsOrbitalRotate_60_100 5s linear 1.5s infinite normal forwards
+      &-3
+        &-item
+          &-1
+            position: absolute
+            right: 1290px
+            bottom: 1160px
+            z-index: 3
+            transform: rotate(-140deg)
+            offset-path: path("M750,1500a750,750 0 1,0 1500,0a750,750 0 1,0 -1500,0")
+            offset-distance: 60%
+            animation: fsOrbitalRotate_60_100 6s linear 0.6s infinite normal forwards
+          &-2
+            position: absolute
+            right: 1230px
+            bottom: 1070px
+            z-index: 3
+            transform: rotate(-160deg)
+            offset-path: path("M750,1500a750,750 0 1,0 1500,0a750,750 0 1,0 -1500,0")
+            offset-distance: 100%
+            animation: fsOrbitalRotate_100_60 6s linear 3s infinite normal forwards
+          &-3
+            position: absolute
+            right: 1490px
+            bottom: 1330px
+            z-index: 3
+            offset-path: path("M750,1500a750,750 0 1,0 1500,0a750,750 0 1,0 -1500,0")
+            offset-distance: 100%
+            animation: fsOrbitalRotate_100_60 4s linear 0s infinite normal forwards
+      &-4
+        &-item
+          &-1
+            position: absolute
+            right: 1670px
+            bottom: 1490px
+            z-index: 3
+            transform: rotate(-150deg)
+            offset-path: path("M900,1800a900,900 0 1,0 1800,0a900,900 0 1,0 -1800,0")
+            offset-distance: 100%
+            animation: fsOrbitalRotate_100_60 10s linear 0s infinite normal forwards
+          &-2
+            position: absolute
+            right: 1670px
+            bottom: 1490px
+            z-index: 3
+            transform: rotate(-120deg)
+            offset-path: path("M900,1800a900,900 0 1,0 1800,0a900,900 0 1,0 -1800,0")
+            offset-distance: 100%
+            animation: fsOrbitalRotate_100_60 10s linear 2.5s infinite normal forwards
+          &-3
+            position: absolute
+            right: 1790px
+            bottom: 1600px
+            z-index: 3
+            offset-path: path("M900,1800a900,900 0 1,0 1800,0a900,900 0 1,0 -1800,0")
+            offset-distance: 100%
+            animation: fsOrbitalRotate_100_60 10s linear 1.5s infinite normal forwards
+      &-5
+        &-item
+          &-1
+            position: absolute
+            right: 1960px
+            bottom: 1720px
+            z-index: 3
+            transform: rotate(-120deg)
+            offset-path: path("M1050,2100a1050,1050 0 1,0 2100,0a1050,1050 0 1,0 -2100,0")
+            offset-distance: 100%
+            animation: fsOrbitalRotate_100_60 8s linear 1s infinite normal forwards
+          &-2
+            position: absolute
+            right: 2090px
+            bottom: 1870px
+            z-index: 3
+            offset-path: path("M1050,2100a1050,1050 0 1,0 2100,0a1050,1050 0 1,0 -2100,0")
+            offset-distance: 100%
+            animation: fsOrbitalRotate_100_60 8s linear 0s infinite normal forwards
+      &-6
+        &-item
+          &-1
+            position: absolute
+            right: 2390px
+            bottom: 2140px
+            z-index: 3
+            offset-path: path("M1200,2400a1200,1200 0 1,0 2400,0a1200,1200 0 1,0 -2400,0")
+            offset-distance: 100%
+            animation: fsOrbitalRotate_100_60 4s linear infinite normal forwards
+      &-7
+        &-item
+          &-1
+            position: absolute
+            right: 2690px
+            bottom: 2410px
+            z-index: 3
+            offset-path: path("M1350,2700a1350,1350 0 1,0 2700,0a1350,1350 0 1,0 -2700,0")
+            offset-distance: 100%
+            animation: fsOrbitalRotate_100_60 3s linear infinite normal forwards
+      &-8
+        &-item
+          &-1
+            position: absolute
+            right: 2990px
+            bottom: 2680px
+            z-index: 3
+            offset-path: path("M1500,3000a1500,1500 0 1,0 3000,0a1500,1500 0 1,0 -3000,0")
+            offset-distance: 100%
+            animation: fsOrbitalRotate_100_60 3s linear 1.2s infinite normal forwards
+
+@keyframes fsOrbitalRotate_100_60
+  0%
+    offset-distance: 100%
+  100%
+    offset-distance: 60%
+
+@keyframes fsOrbitalRotate_60_100
+  0%
+    offset-distance: 60%
+  100%
+    offset-distance: 100%
+
+@keyframes sunGlow
+  0%
+    box-shadow: 0px 0px 200px 300px rgba(#F8B22C, 0.2)
+  33%
+    box-shadow: 0px 0px 200px 100px rgba(#F8B22C, 0.2)
+  66%
+    box-shadow: 0px 0px 200px 200px rgba(#F8B22C, 0.2)
+  100%
+    box-shadow: 0px 0px 200px 300px rgba(#F8B22C, 0.2)
 
 @media ( max-width: 1200px )
   .fs
     padding-bottom: 30px
     &-wrapper
       min-height: 768px
+    &-space
+      left: 270px
+      top: 60px
     &-inner
       padding-top: 90px
       padding-left: 30px
@@ -74,8 +288,12 @@
 @media ( max-width: 991px )
   .fs
     padding-bottom: 60px
+    justify-content: center
     &-wrapper
       min-height: 1024px
+    &-space
+      top: 90px
+      left: 100px
     &-inner
       padding-top: 50px
       padding-right: 30px
@@ -99,6 +317,9 @@
     padding-bottom: 20px
     &-wrapper
       min-height: 720px
+    &-space
+      top: 250px
+      left: 200px
     &-inner
       padding-top: 40px
       padding-left: 20px

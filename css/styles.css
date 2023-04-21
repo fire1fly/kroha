@@ -735,7 +735,6 @@ input, textarea {
 }
 @media (max-width: 991px) {
   .h {
-    position: relative;
     -webkit-transition: all 0.3s ease-in-out 0s;
     -o-transition: all 0.3s ease-in-out 0s;
     transition: all 0.3s ease-in-out 0s;
@@ -1382,6 +1381,9 @@ input, textarea {
 
 .fs {
   padding-bottom: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .fs-wrapper {
   position: relative;
@@ -1392,13 +1394,17 @@ input, textarea {
   background-size: cover;
   background-position: center center;
 }
-.fs-inner {
+.fs-wrapper .h {
   position: relative;
-  z-index: 2;
+  z-index: 5;
+}
+.fs-inner {
   padding-top: 150px;
   padding-left: 150px;
 }
 .fs-title {
+  position: relative;
+  z-index: 4;
   margin: 0;
   font-family: "Montserrat Alternates Regular";
   font-size: 48px;
@@ -1415,6 +1421,8 @@ input, textarea {
   color: #434A57;
 }
 .fs-rowlist {
+  position: relative;
+  z-index: 4;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1432,6 +1440,8 @@ input, textarea {
   color: #0876E4;
 }
 .fs-btnbar {
+  position: relative;
+  z-index: 4;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1452,6 +1462,8 @@ input, textarea {
   margin-top: 180px;
 }
 .fs-socbar {
+  position: relative;
+  z-index: 4;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1476,13 +1488,305 @@ input, textarea {
   max-width: 100%;
   max-height: 100%;
 }
+.fs-space {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.fs-space-sun {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.fs-space-sun::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 1px;
+  height: 1px;
+  -webkit-box-shadow: 0px 0px 600px 300px rgba(248, 178, 44, 0.2);
+          box-shadow: 0px 0px 600px 300px rgba(248, 178, 44, 0.2);
+  -webkit-animation: sunGlow 2s ease-in 0s infinite normal forwards;
+          animation: sunGlow 2s ease-in 0s infinite normal forwards;
+}
+.fs-space-orbital {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  bottom: 0;
+  -webkit-transform: translate(50%, 60%);
+      -ms-transform: translate(50%, 60%);
+          transform: translate(50%, 60%);
+  z-index: 1;
+  line-height: 0;
+}
+.fs-space-orbital-1-item-1 {
+  position: absolute;
+  right: 250px;
+  bottom: 150px;
+  z-index: 3;
+  -webkit-transform: rotate(-140deg);
+      -ms-transform: rotate(-140deg);
+          transform: rotate(-140deg);
+  offset-path: path("M0,450a450,450 0 1,0 900,0a450,450 0 1,0 -900,0");
+  offset-distance: 100%;
+  -webkit-animation: fsOrbitalRotate_100_60 6s linear 1.5s infinite normal forwards;
+          animation: fsOrbitalRotate_100_60 6s linear 1.5s infinite normal forwards;
+}
+.fs-space-orbital-1-item-2 {
+  position: absolute;
+  right: 300px;
+  bottom: 200px;
+  z-index: 3;
+  -webkit-transform: rotate(-140deg);
+      -ms-transform: rotate(-140deg);
+          transform: rotate(-140deg);
+  offset-path: path("M0,450a450,450 0 1,0 900,0a450,450 0 1,0 -900,0");
+  offset-distance: 80%;
+  -webkit-animation: fsOrbitalRotate_100_60 6s linear infinite normal forwards;
+          animation: fsOrbitalRotate_100_60 6s linear infinite normal forwards;
+}
+.fs-space-orbital-2-item-1 {
+  position: absolute;
+  right: 430px;
+  bottom: 310px;
+  z-index: 3;
+  -webkit-transform: rotate(-160deg);
+      -ms-transform: rotate(-160deg);
+          transform: rotate(-160deg);
+  offset-path: path("M0,600a600,600 0 1,0 1200,0a600,600 0 1,0 -1200,0");
+  offset-distance: 60%;
+  -webkit-animation: fsOrbitalRotate_60_100 5s linear 2.5s infinite normal forwards;
+          animation: fsOrbitalRotate_60_100 5s linear 2.5s infinite normal forwards;
+}
+.fs-space-orbital-2-item-2 {
+  position: absolute;
+  right: 490px;
+  bottom: 370px;
+  z-index: 3;
+  offset-path: path("M0,600a600,600 0 1,0 1200,0a600,600 0 1,0 -1200,0");
+  offset-distance: 60%;
+  -webkit-animation: fsOrbitalRotate_60_100 5s linear 0.5s infinite normal forwards;
+          animation: fsOrbitalRotate_60_100 5s linear 0.5s infinite normal forwards;
+}
+.fs-space-orbital-2-item-3 {
+  position: absolute;
+  right: 590px;
+  bottom: 460px;
+  z-index: 3;
+  offset-path: path("M0,600a600,600 0 1,0 1200,0a600,600 0 1,0 -1200,0");
+  offset-distance: 60%;
+  -webkit-animation: fsOrbitalRotate_60_100 5s linear 1.5s infinite normal forwards;
+          animation: fsOrbitalRotate_60_100 5s linear 1.5s infinite normal forwards;
+}
+.fs-space-orbital-3-item-1 {
+  position: absolute;
+  right: 1290px;
+  bottom: 1160px;
+  z-index: 3;
+  -webkit-transform: rotate(-140deg);
+      -ms-transform: rotate(-140deg);
+          transform: rotate(-140deg);
+  offset-path: path("M750,1500a750,750 0 1,0 1500,0a750,750 0 1,0 -1500,0");
+  offset-distance: 60%;
+  -webkit-animation: fsOrbitalRotate_60_100 6s linear 0.6s infinite normal forwards;
+          animation: fsOrbitalRotate_60_100 6s linear 0.6s infinite normal forwards;
+}
+.fs-space-orbital-3-item-2 {
+  position: absolute;
+  right: 1230px;
+  bottom: 1070px;
+  z-index: 3;
+  -webkit-transform: rotate(-160deg);
+      -ms-transform: rotate(-160deg);
+          transform: rotate(-160deg);
+  offset-path: path("M750,1500a750,750 0 1,0 1500,0a750,750 0 1,0 -1500,0");
+  offset-distance: 100%;
+  -webkit-animation: fsOrbitalRotate_100_60 6s linear 3s infinite normal forwards;
+          animation: fsOrbitalRotate_100_60 6s linear 3s infinite normal forwards;
+}
+.fs-space-orbital-3-item-3 {
+  position: absolute;
+  right: 1490px;
+  bottom: 1330px;
+  z-index: 3;
+  offset-path: path("M750,1500a750,750 0 1,0 1500,0a750,750 0 1,0 -1500,0");
+  offset-distance: 100%;
+  -webkit-animation: fsOrbitalRotate_100_60 4s linear 0s infinite normal forwards;
+          animation: fsOrbitalRotate_100_60 4s linear 0s infinite normal forwards;
+}
+.fs-space-orbital-4-item-1 {
+  position: absolute;
+  right: 1670px;
+  bottom: 1490px;
+  z-index: 3;
+  -webkit-transform: rotate(-150deg);
+      -ms-transform: rotate(-150deg);
+          transform: rotate(-150deg);
+  offset-path: path("M900,1800a900,900 0 1,0 1800,0a900,900 0 1,0 -1800,0");
+  offset-distance: 100%;
+  -webkit-animation: fsOrbitalRotate_100_60 10s linear 0s infinite normal forwards;
+          animation: fsOrbitalRotate_100_60 10s linear 0s infinite normal forwards;
+}
+.fs-space-orbital-4-item-2 {
+  position: absolute;
+  right: 1670px;
+  bottom: 1490px;
+  z-index: 3;
+  -webkit-transform: rotate(-120deg);
+      -ms-transform: rotate(-120deg);
+          transform: rotate(-120deg);
+  offset-path: path("M900,1800a900,900 0 1,0 1800,0a900,900 0 1,0 -1800,0");
+  offset-distance: 100%;
+  -webkit-animation: fsOrbitalRotate_100_60 10s linear 2.5s infinite normal forwards;
+          animation: fsOrbitalRotate_100_60 10s linear 2.5s infinite normal forwards;
+}
+.fs-space-orbital-4-item-3 {
+  position: absolute;
+  right: 1790px;
+  bottom: 1600px;
+  z-index: 3;
+  offset-path: path("M900,1800a900,900 0 1,0 1800,0a900,900 0 1,0 -1800,0");
+  offset-distance: 100%;
+  -webkit-animation: fsOrbitalRotate_100_60 10s linear 1.5s infinite normal forwards;
+          animation: fsOrbitalRotate_100_60 10s linear 1.5s infinite normal forwards;
+}
+.fs-space-orbital-5-item-1 {
+  position: absolute;
+  right: 1960px;
+  bottom: 1720px;
+  z-index: 3;
+  -webkit-transform: rotate(-120deg);
+      -ms-transform: rotate(-120deg);
+          transform: rotate(-120deg);
+  offset-path: path("M1050,2100a1050,1050 0 1,0 2100,0a1050,1050 0 1,0 -2100,0");
+  offset-distance: 100%;
+  -webkit-animation: fsOrbitalRotate_100_60 8s linear 1s infinite normal forwards;
+          animation: fsOrbitalRotate_100_60 8s linear 1s infinite normal forwards;
+}
+.fs-space-orbital-5-item-2 {
+  position: absolute;
+  right: 2090px;
+  bottom: 1870px;
+  z-index: 3;
+  offset-path: path("M1050,2100a1050,1050 0 1,0 2100,0a1050,1050 0 1,0 -2100,0");
+  offset-distance: 100%;
+  -webkit-animation: fsOrbitalRotate_100_60 8s linear 0s infinite normal forwards;
+          animation: fsOrbitalRotate_100_60 8s linear 0s infinite normal forwards;
+}
+.fs-space-orbital-6-item-1 {
+  position: absolute;
+  right: 2390px;
+  bottom: 2140px;
+  z-index: 3;
+  offset-path: path("M1200,2400a1200,1200 0 1,0 2400,0a1200,1200 0 1,0 -2400,0");
+  offset-distance: 100%;
+  -webkit-animation: fsOrbitalRotate_100_60 4s linear infinite normal forwards;
+          animation: fsOrbitalRotate_100_60 4s linear infinite normal forwards;
+}
+.fs-space-orbital-7-item-1 {
+  position: absolute;
+  right: 2690px;
+  bottom: 2410px;
+  z-index: 3;
+  offset-path: path("M1350,2700a1350,1350 0 1,0 2700,0a1350,1350 0 1,0 -2700,0");
+  offset-distance: 100%;
+  -webkit-animation: fsOrbitalRotate_100_60 3s linear infinite normal forwards;
+          animation: fsOrbitalRotate_100_60 3s linear infinite normal forwards;
+}
+.fs-space-orbital-8-item-1 {
+  position: absolute;
+  right: 2990px;
+  bottom: 2680px;
+  z-index: 3;
+  offset-path: path("M1500,3000a1500,1500 0 1,0 3000,0a1500,1500 0 1,0 -3000,0");
+  offset-distance: 100%;
+  -webkit-animation: fsOrbitalRotate_100_60 3s linear 1.2s infinite normal forwards;
+          animation: fsOrbitalRotate_100_60 3s linear 1.2s infinite normal forwards;
+}
 
+@-webkit-keyframes fsOrbitalRotate_100_60 {
+  0% {
+    offset-distance: 100%;
+  }
+  100% {
+    offset-distance: 60%;
+  }
+}
+
+@keyframes fsOrbitalRotate_100_60 {
+  0% {
+    offset-distance: 100%;
+  }
+  100% {
+    offset-distance: 60%;
+  }
+}
+@-webkit-keyframes fsOrbitalRotate_60_100 {
+  0% {
+    offset-distance: 60%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
+@keyframes fsOrbitalRotate_60_100 {
+  0% {
+    offset-distance: 60%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
+@-webkit-keyframes sunGlow {
+  0% {
+    -webkit-box-shadow: 0px 0px 200px 300px rgba(248, 178, 44, 0.2);
+            box-shadow: 0px 0px 200px 300px rgba(248, 178, 44, 0.2);
+  }
+  33% {
+    -webkit-box-shadow: 0px 0px 200px 100px rgba(248, 178, 44, 0.2);
+            box-shadow: 0px 0px 200px 100px rgba(248, 178, 44, 0.2);
+  }
+  66% {
+    -webkit-box-shadow: 0px 0px 200px 200px rgba(248, 178, 44, 0.2);
+            box-shadow: 0px 0px 200px 200px rgba(248, 178, 44, 0.2);
+  }
+  100% {
+    -webkit-box-shadow: 0px 0px 200px 300px rgba(248, 178, 44, 0.2);
+            box-shadow: 0px 0px 200px 300px rgba(248, 178, 44, 0.2);
+  }
+}
+@keyframes sunGlow {
+  0% {
+    -webkit-box-shadow: 0px 0px 200px 300px rgba(248, 178, 44, 0.2);
+            box-shadow: 0px 0px 200px 300px rgba(248, 178, 44, 0.2);
+  }
+  33% {
+    -webkit-box-shadow: 0px 0px 200px 100px rgba(248, 178, 44, 0.2);
+            box-shadow: 0px 0px 200px 100px rgba(248, 178, 44, 0.2);
+  }
+  66% {
+    -webkit-box-shadow: 0px 0px 200px 200px rgba(248, 178, 44, 0.2);
+            box-shadow: 0px 0px 200px 200px rgba(248, 178, 44, 0.2);
+  }
+  100% {
+    -webkit-box-shadow: 0px 0px 200px 300px rgba(248, 178, 44, 0.2);
+            box-shadow: 0px 0px 200px 300px rgba(248, 178, 44, 0.2);
+  }
+}
 @media (max-width: 1200px) {
   .fs {
     padding-bottom: 30px;
   }
   .fs-wrapper {
     min-height: 768px;
+  }
+  .fs-space {
+    left: 270px;
+    top: 60px;
   }
   .fs-inner {
     padding-top: 90px;
@@ -1495,9 +1799,16 @@ input, textarea {
 @media (max-width: 991px) {
   .fs {
     padding-bottom: 60px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .fs-wrapper {
     min-height: 1024px;
+  }
+  .fs-space {
+    top: 90px;
+    left: 100px;
   }
   .fs-inner {
     padding-top: 50px;
@@ -1540,6 +1851,10 @@ input, textarea {
   }
   .fs-wrapper {
     min-height: 720px;
+  }
+  .fs-space {
+    top: 250px;
+    left: 200px;
   }
   .fs-inner {
     padding-top: 40px;

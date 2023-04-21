@@ -24,3 +24,10 @@
 
 @mixin gradient-grey
   background: linear-gradient(132deg, #E9EDF4 0%, #E8EDF7 100%)
+
+@mixin orbitalRotate($animationName, $startFrame, $endFrame)
+  @keyframes $animationName
+    0%
+      offset-distance: $startFrame
+    100%
+      offset-distance: $endFrame
