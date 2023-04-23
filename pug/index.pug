@@ -12,6 +12,7 @@ block variables
 block prepend scripts
   script(src="./js/swiper-bundle.min.js")
   script(defer src="./js/accordion.js")
+  script(defer src="./js/close.js")
 
 block header
   include ./components/header/_header.pug
@@ -359,7 +360,27 @@ block firstScreen
               source(media="(min-width: 520px)", srcset="./assets/static/icon-huawei-app-gallery-label.svg")
               source(media="(min-width: 0px)", srcset="./assets/static/icon-huawei-app-gallery.svg")
               img(src="./assets/static/icon-huawei-app-gallery-label.svg", alt="Google Play")
+
 block content
   main.main
+    section.t
+      .t-space
+        .t-space
+          .t-space-sidecomet.to-close
+            .t-space-sidecomet-close.to-close-btn
+              img(src="./assets/static/icon-close-grey.svg", alt="close")
+            a.t-space-sidecomet-pic(href="./kroha-advanced.html")
+              img(src="./assets/static/icon-kroha-advanced-2.svg", alt="pic")
+      .t-grid
+        .t-pic
+          img(src="./assets/static/total-child-1.svg", alt="child")
+          // img(src="./assets/static/total-child-2.svg", alt="child")
+          //img(src="./assets/static/total-child-3.svg", alt="child")
+        .t-info
+          h2.t-title
+            .
+              KROHA <span class="_text-primary">here to help</span> with threats from the universe of social media
+          .text._text-darkgrey._my-20 KROHA parental control tools help reduce the risks your kids face online.
+          button.btn.btn-primary._rounded._text-upper.t-btn(type="button") Renew license
 block footer
   include ./components/footer/_footer.pug

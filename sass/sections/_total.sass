@@ -1,0 +1,98 @@
+.t
+  position: relative
+  padding-top: 400px
+  overflow: hidden
+  &-space
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    &-sidecomet
+      position: absolute
+      top: 20px
+      right: 20px
+      z-index: 4
+      width: 208px
+      height: 208px
+      +transition(opacity, 0.3s, ease-in-out)
+      &:hover
+        .t-space-sidecomet-close
+          opacity: 1
+      &.closing
+        opacity: 0
+      &-close
+        position: absolute
+        z-index: 5
+        right: 5px
+        bottom: 65px
+        cursor: pointer
+        opacity: 0
+        +transition(opacity, 0.3s, ease-in-out)
+  &-grid
+    position: relative
+    z-index: 3
+    margin: 0 auto 340px
+    max-width: 1110px
+    padding: 0 30px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 10px
+    .t-info
+      flex: 0 1 440px
+  &-pic
+    max-width: 350px
+    width: 100%
+    line-height: 0
+    img, svg
+      max-width: 100%
+  &-title
+    margin: 0
+    +monts-reg
+    font-size: 32px
+    line-height: 1.3
+    color: #1A3564
+  &-btn
+    max-width: 273px
+    width: 100%
+
+@media ( max-width: 991px )
+  .t
+    padding-top: 280px
+    &-space
+      &-sidecomet
+        display: none
+    &-grid
+      margin-bottom: 200px
+      max-width: 640px
+      flex-direction: column
+      gap: 0
+      .t
+        &-info
+          margin-top: 240px
+          flex: auto
+    &-info
+      display: flex
+      flex-direction: column
+      align-items: center
+      text-align: center
+
+@media ( max-width: 991px )
+  .t
+    padding-top: 160px
+    &-grid
+      margin-bottom: 100px
+      padding: 0 20px
+      .t
+        &-info
+          margin-top: 130px
+    &-pic
+      max-width: 200px
+    &-info
+      display: flex
+      flex-direction: column
+      align-items: center
+      text-align: center
+    &-title
+      font-size: 24px
