@@ -29,9 +29,113 @@
         cursor: pointer
         opacity: 0
         +transition(opacity, 0.3s, ease-in-out)
+    &-orbital
+      position: absolute
+      top: 300px
+      left: -450px
+      z-index: 1
+      transform: translate(-50%, -50%)
+    &-comet
+      position: absolute
+      z-index: 4
+      &._1
+        top: 300px
+        left: 46px
+        .t-space-comet-hint
+          top: calc(100% - 20px)
+      &._2
+        top: 200px
+        left: 205px
+        .t-space-comet-hint
+          top: calc(100% - 20px)
+      &._3
+        top: 630px
+        left: 100px
+        .t-space-comet-hint
+          top: calc(100% - 10px)
+          left: 35%
+      &._4
+        top: 860px
+        left: 120px
+        .t-space-comet-hint
+          top: calc(100% - 10px)
+          left: 35%
+      &._5
+        top: 194px
+        left: 500px
+        .t-space-comet-hint
+          top: calc(100% - 20px)
+          left: 50%
+      &._6
+        top: 840px
+        left: 320px
+        .t-space-comet-hint
+          top: calc(100% - 10px)
+          left: 35%
+      &._7
+        top: 720px
+        left: 550px
+        .t-space-comet-hint
+          top: calc(100% - 10px)
+          left: 35%
+      &__pic
+        .to
+          &-stroke
+            &-white
+              stroke: #053D75
+              +transition(stroke, 0.3s, ease-in-out)
+            &-primary
+              +transition(stroke, 0.3s, ease-in-out)
+          &-fill
+            &-primary
+              fill: $white
+              +transition(fill, 0.3s, ease-in-out)
+        &:hover
+          .to
+            &-stroke
+              &-white
+                stroke: $white
+              &-primary
+                stroke: $primary
+            &-fill
+              &-primary
+                fill: $primary
+          & + .t-space-comet-hint
+            visibility: visible
+            opacity: 1
+      &-hint
+        position: absolute
+        top: 100%
+        left: 50%
+        z-index: 5
+        +transition(all, 0.3s, ease-in-out)
+        opacity: 0
+        visibility: hidden
+        border-radius: 20px
+        border-top-left-radius: 0
+        padding: 14px 20px
+        background-color: rgba(#0F1622, 0.8)
+        white-space: nowrap
+        +monts-reg
+        font-size: 16px
+        line-height: 1.4
+        color: $white
+    &-star
+      position: absolute
+      z-index: 4
+      &._1
+        top: 290px
+        left: 442px
+      &._2
+        top: 230px
+        left: 890px
+      &._3
+        top: 960px
+        left: 715px
+      &._4
+        top: 780px
+        left: 960px
   &-grid
-    position: relative
-    z-index: 3
     margin: 0 auto 340px
     max-width: 1110px
     padding: 0 30px
@@ -42,11 +146,16 @@
     .t-info
       flex: 0 1 440px
   &-pic
+    position: relative
+    z-index: 3
     max-width: 350px
     width: 100%
     line-height: 0
     img, svg
       max-width: 100%
+  &-info
+    position: relative
+    z-index: 3
   &-title
     margin: 0
     +monts-reg
@@ -61,6 +170,8 @@
   .t
     padding-top: 280px
     &-space
+      top: -110px
+      left: -70px
       &-sidecomet
         display: none
     &-grid
@@ -78,21 +189,88 @@
       align-items: center
       text-align: center
 
-@media ( max-width: 991px )
+@media ( max-width: 768px )
   .t
-    padding-top: 160px
     &-grid
       margin-bottom: 100px
       padding: 0 20px
       .t
         &-info
-          margin-top: 130px
-    &-pic
-      max-width: 200px
+          // margin-top: 130px
     &-info
       display: flex
       flex-direction: column
       align-items: center
       text-align: center
+
+@media ( max-width: 520px )
+  .t
+    padding-top: 130px
+    &-space
+      left: -90px
+      &-orbital
+        top: 190px
+        left: -220px
+        img
+          max-width: 100%
+        &._1
+          width: 676px
+        &._2
+          width: 844px
+        &._3
+          width: 1014px
+        &._4
+          width: 1182px
+        &._5
+          width: 1352px
+        &._6
+          display: none
+        &._7
+          display: none
+      &-comet
+        &._1
+          top: 170px
+          left: 66px
+        &._2
+          top: 130px
+          left: 150px
+        &._3
+          top: 310px
+          left: 120px
+        &._4
+          top: 460px
+          left: 120px
+        &._5
+          top: 155px
+          left: 320px
+        &._6
+          top: 560px
+          left: 130px
+        &._5, &._7
+          .t-space-comet-hint
+            left: auto
+            right: 50%
+        &._7
+          top: 430px
+          left: 340px
+        &__pic
+          display: block
+          width: 100px
+          height: 100px
+        &-hint
+          border-radius: 15px
+          border-top-left-radius: 0
+          padding: 6px 11px
+          font-size: 12px
+          &._sm-right
+            border-top-left-radius: 15px
+            border-top-right-radius: 0
+            left: auto
+            right: 50%
+    &-grid
+      .t-info
+        margin-top: 220px
+    &-pic
+      max-width: 200px
     &-title
       font-size: 24px
