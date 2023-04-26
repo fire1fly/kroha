@@ -1,5 +1,6 @@
 *
   box-sizing: border-box
+  -webkit-tap-highlight-color: transparent
 
 a
   color: inherit
@@ -107,6 +108,8 @@ input, textarea
     margin-top: 20px
   &-30
     margin-top: 30px
+  &-40
+    margin-top: 40px
 
 ._mb
   &-10
@@ -117,6 +120,8 @@ input, textarea
     margin-bottom: 20px
   &-30
     margin-bottom: 30px
+  &-40
+    margin-bottom: 40px
 
 ._py
   &-10
@@ -152,6 +157,27 @@ input, textarea
       .accordion-body
         display: none
 
+.tabs
+  &-node
+    display: block
+    visibility: visible
+    &.hidden
+      &:not(.active)
+        display: none
+    &.active
+      display: block
+      animation: tabFadeUp 0.3s ease-in-out 0s 1 normal forwards
+  &._height-transition
+    .tabs-node-wrapper
+      overflow: hidden
+      transition: height 0.5s ease-in-out
+
+@keyframes tabFadeUp
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
 @media ( max-width: 520px )
   ._sm
     &-mt
@@ -163,6 +189,8 @@ input, textarea
         margin-top: 20px
       &-30
         margin-top: 30px
+      &-40
+        margin-top: 40px
 
   .text
     font-size: 16px

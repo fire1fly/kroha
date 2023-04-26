@@ -1,0 +1,232 @@
+.ftsl
+  padding: 30px 0
+  min-height: 900px
+  display: flex
+  align-items: center
+  background: transparent url('../assets/static/screen-gradient-bg.svg')
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center center
+  &-grid
+    margin: 0 auto
+    max-width: 1220px
+    padding: 0 30px
+    display: flex
+    align-items: center
+    .ftsl
+      &-tabs-list
+        flex: 0 0 auto
+      &-info
+        margin-left: 70px
+    .tabs-node-wrapper
+      flex: 1 1 auto
+  &-tabs
+    &-list
+      border-radius: 20px
+      width: 87px
+      height: 510px
+      overflow: hidden
+      background-color: $white
+    &-item
+      margin: 0 auto
+      border-radius: 10px
+      border: 1px solid transparent
+      width: 67px
+      height: 62px
+      display: flex
+      align-items: center
+      justify-content: center
+      +transition(border-color, 0.3s, ease-in-out)
+      cursor: pointer
+      &.active
+        border-color: $primary
+      img, svg
+        width: 32px
+        height: 32px
+    &-slider
+      position: relative
+      padding: 58px 0
+      height: 100%
+      overflow: hidden
+      &-button
+        &-prev, &-next
+          position: absolute
+          z-index: 2
+          border: none
+          flex: 0 0 auto
+          width: 100%
+          height: 58px
+          padding: 0
+          display: flex
+          align-items: center
+          justify-content: center
+          background-color: $white
+          cursor: pointer
+          img, svg
+            +transition(opacity, 0.3s, ease-in-out)
+          &.swiper-button-disabled
+            cursor: not-allowed
+            img, svg
+              opacity: 0.5
+        &-prev
+          top: 0
+          left: 0
+          img, svg
+            transform: rotate(90deg)
+            width: 28px
+            height: 28px
+        &-next
+          bottom: 0
+          left: 0
+          img, svg
+            transform: rotate(90deg)
+            width: 28px
+            height: 28px
+  &-info
+    &-grid
+      display: flex
+      align-items: center
+      justify-content: space-between
+      gap: 30px
+    &-pic
+      flex: 0 0 auto
+      max-width: 550px
+      line-height: 0
+      display: flex
+      align-items: center
+      justify-content: center
+      img
+        max-width: 100%
+    &-h
+      display: flex
+      align-items: center
+      flex-wrap: wrap
+      gap: 10px 20px
+  &-title
+    +monts-semibold
+    font-size: 32px
+    line-height: 1.3
+    color: $darkblue
+  &-heading
+    margin: 0
+    +monts-semibold
+    font-size: 20px
+    line-height: 1.3
+    color: $darkblue
+  &-text
+    font-size: 16px
+  &-link
+    display: flex
+    align-items: center
+    gap: 10px
+    font-size: 16px
+    img, svg
+      width: 24px
+      height: 24px
+
+@media ( max-width: 1200px )
+  .ftsl
+    &-grid
+      .ftsl
+        &-info
+          margin-left: 50px
+    &-info
+      &-pic
+        max-width: 400px
+
+@media ( max-width: 991px )
+  .ftsl
+    padding: 100px 0
+    min-height: auto
+    &-grid
+      max-width: 640px
+      flex-direction: column
+      .ftsl
+        &-tabs-list
+          flex: auto
+          order: 1
+        &-info
+          margin-left: 0
+      .tabs-node-wrapper
+        flex: auto
+    &-info
+      order: 1
+      display: flex
+      flex-direction: column
+      align-items: center
+      &-grid
+        flex-direction: column
+      &-h
+        justify-content: center
+      &-pic
+        flex: auto
+        max-width: 350px
+        height: 360px
+        img, svg
+          max-height: 100%
+    &-title
+      text-align: center
+    &-text
+      text-align: center
+    &-link
+      justify-content: center
+    &-tabs
+      &-list
+        margin-top: 40px
+        width: 100%
+        height: 83px
+      &-item
+        width: 78px
+        height: 62px
+      &-slider
+        padding: 0 58px
+        .swiper-slide
+          display: flex
+          align-items: center
+          justify-content: center
+        &-button
+          &-prev, &-next
+            width: 58px
+            height: 100%
+          &-prev
+            img, svg
+              transform: rotate(0deg)
+          &-next
+            top: 0
+            right: 0
+            left: auto
+            bottom: auto
+            img, svg
+              transform: rotate(0deg)
+
+@media ( max-width: 768px )
+  .ftsl
+    &-tabs
+      &-list
+        max-width: 400px
+
+@media ( max-width: 520px )
+  .ftsl
+    &-grid
+      padding: 0
+    &-info
+      &-grid
+        padding: 0 20px
+      &-pic
+        height: 190px
+    &-title
+      font-size: 24px
+    &-heading
+      font-size: 18px
+    &-text
+      font-size: 14px
+    &-link
+      font-size: 14px
+    &-tabs
+      &-list
+        margin-top: 30px
+        max-width: 320px
+        height: 73px
+      &-item
+        width: 55px
+        height: 52px
