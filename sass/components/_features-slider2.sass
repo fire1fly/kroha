@@ -1,0 +1,78 @@
+.ftsl2
+  padding: 200px 30px
+  &-item
+    &-pic
+      width: 64px
+      height: 64px
+      line-height: 0
+      img, svg
+        width: 100%
+    &-sub
+      +opensans-semibold
+      font-size: 12px
+      color: #B8C3D4
+      &._primary
+        color: $primary
+    &-title
+      +monts-med
+      font-size: 24px
+      line-height: 1.3
+      color: $darkblue
+  &-slider
+    overflow: hidden
+    &-wrapper
+      position: relative
+      margin: 0 auto
+      max-width: 1380px
+      padding: 0 60px
+    &-button
+      &-prev, &-next
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        width: 53px
+        height: 62px
+        background: transparent url('../assets/static/icon-hexagon-grey.svg')
+        background-repeat: no-repeat
+        background-size: 100%
+        background-position: center center
+        display: flex
+        align-items: center
+        justify-content: center
+        line-height: 0
+        +transition(opacity, 0.3s, ease-in-out)
+        cursor: pointer
+        user-select: none
+        &:active
+          transform: translateY(calc(-50% + 1px))
+        &.swiper-button-disabled
+          opacity: 0.5
+          cursor: not-allowed
+        img, svg
+          width: 28px
+          height: 28px
+      &-prev
+        left: 0
+      &-next
+        right: 0
+
+@media ( max-width: 520px )
+  .ftsl2
+    padding: 100px 20px
+    &-item
+      &-sub
+        font-size: 10px
+      &-title
+        font-size: 16px
+      &-text
+        font-size: 14px
+    &-slider
+      &-wrapper
+        padding: 0 40px
+      &-button
+        &-prev, &-next
+          width: 34px
+          height: 40px
+          img, svg
+            width: 16px
+            height: 16px
