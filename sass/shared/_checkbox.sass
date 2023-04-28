@@ -1,0 +1,25 @@
+.checkbox
+  flex: 0 0 auto
+  input[type="checkbox"]
+    display: none
+    &:not(:disabled)
+      &:checked + .checkbox-check
+        border-color: $primary
+        background-color: $primary
+        img, svg
+          opacity: 1
+    &:disabled + .checkbox-check
+      cursor: not-allowed
+      opacity: 0.8
+  &-check
+    border-radius: 8px
+    border: 2px solid #8E8F9B
+    width: 24px
+    height: 24px
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: transparent
+    +transition(all, 0.3s, ease-in-out)
+    img, svg
+      opacity: 0

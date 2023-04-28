@@ -16,6 +16,7 @@ block prepend scripts
   script(defer src="./js/close.js")
   script(defer src="./js/sliders.js")
   script(defer src="./js/tabs.js")
+  script(defer src="./js/temp_form.js")
 
 block prepend styles
   link(rel="stylesheet", href="./css/swiper-bundle.min.css")
@@ -379,6 +380,8 @@ block content
     include ./components/_features-slider2.pug
 
     include ./components/_articles-feed.pug
+
+    include ./components/_form-registration.pug
 
 block footer
   include ./components/footer/_footer.pug

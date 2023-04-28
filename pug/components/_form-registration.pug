@@ -1,0 +1,46 @@
+section.rf
+  .rf-grid
+    .rf-pic
+      img(src=staticRoute + 'registration-form-child-1.png', alt="child")
+      // img(src=staticRoute + 'registration-form-child-2.png', alt="child")
+      //img(src=staticRoute + 'registration-form-child-3.png', alt="child")
+    form.rf-form.form(action="#")
+      h2.form-title._text-darkblue._md-text-center._fz-32._sm-fz-24 Create your <span class="_text-primary">FREE account</span> now
+      .text._fz-20._sm-fz-18._mt-20._md-text-center And enjoy a trial of our Premium parental control features
+      ._df._align-center._justify-between._gap-x-30._sm-gap-x-20._mt-40
+        button.btn.btn-white._px-20._flex-grow-1._gap-x-15(type="button")
+          .btn-icon
+            img(src=staticRoute + 'icon-google.svg', alt="Google")
+          .btn-text Google
+        button.btn.btn-black._px-20._flex-grow-1._gap-x-15(type="button")
+          .btn-icon
+            img(src=staticRoute + 'icon-apple-white.svg', alt="Apple")
+          .btn-text Apple
+      .rls._my-40._gap-x-20
+        .rls-line
+        .rls-label.text._text-darkgrey._fz-20._sm-fz-18 Or
+        .rls-line
+      .form-block
+        .input-field
+          input.input(type="text")
+          .input-label._bg-white Name
+        .input-output
+      .form-block
+        .input-field.error
+          input.input(type="email")
+          .input-label._bg-white E-mail
+        .input-output Неккоректный e-mail
+      .form-block
+        .input-field
+          input.input(type="password")
+          .input-label._bg-white Password
+        .input-output
+      label._df._align-center._gap-x-15._mt-30._cursor-pointer
+        .checkbox
+          input(type="checkbox")
+          .checkbox-check
+            img(src=staticRoute + "icon-check-white.svg", alt="check")
+        .text._fz-16._text-darkgrey I agree to the <a href="#" class="_text-primary">Terms of Service</a> and <a href="#" class="_text-primary">Privacy Policy</a>
+      btn.btn.btn-primary._rounded._mt-30._px-20
+        .btn-text._text-upper Create
+

@@ -1,0 +1,16 @@
+.form
+  &-title
+    margin: 0
+    +monts-reg
+    line-height: 1.3
+  &-btn
+    padding: 0 20px
+  &-block
+    display: block
+    width: 100%
+    .input-field
+      &:not(.error)
+        margin-bottom: 30px
+      &.error
+        & + .input-output
+          margin-bottom: 12px
