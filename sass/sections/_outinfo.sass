@@ -1,0 +1,42 @@
+.oi
+  padding: 0 30px 200px
+  &-inner
+    margin: 0 auto
+    max-width: 1144px
+    display: flex
+    justify-content: space-between
+    gap: 30px
+  &-info
+    flex: 0 1 674px
+  &-link
+    &-feed
+      display: flex
+      justify-content: space-between
+      gap: 30px
+    .qrlink
+      &-qr, &-link
+        img
+          max-width: 100%
+  &-bg
+    flex: 0 1 320px
+
+@media ( max-width: 991px )
+  .oi
+    &-inner
+      display: block
+      max-width: 708px
+    &-bg
+      display: none
+    &-link
+      flex: 0 0 190px
+      &-feed
+        overflow-y: auto
+        padding-bottom: 10px
+        scrollbar-width: 0
+        &::-webkit-scrollbar
+          width: 0
+          height: 0
+
+@media ( max-width: 520px )
+  .oi
+    padding: 0 20px 100px

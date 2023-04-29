@@ -1,0 +1,41 @@
+.bnr
+  border-radius: 20px
+  &._grid
+    &-1
+      display: grid
+      grid-template-columns: 0.9fr 1.1fr
+      gap: 20px
+      .bnr
+        &-title
+          grid-column: 1/2
+          grid-row: 1/2
+        &-desc
+          grid-column: 1/2
+          grid-row: 2/3
+        &-link
+          align-self: center
+          grid-column: 2/3
+          grid-row: 1/3
+  &-title
+    margin: 0
+    +monts-reg
+
+@media ( max-width: 520px )
+  .bnr
+    &._grid
+      &-1
+        display: grid
+        grid-template-columns: 1fr
+        gap: 20px
+        .bnr
+          &-title
+            text-align: center
+            grid-column: auto
+            grid-row: auto
+          &-desc
+            grid-column: auto
+            grid-row: auto
+          &-link
+            align-self: center
+            grid-column: auto
+            grid-row: auto
