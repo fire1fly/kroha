@@ -80,24 +80,49 @@ block firstScreen
             .btn-icon
               img(src="./assets/static/icon-play-primary.svg", alt="play")
       .fs-grid-pic
-        img(src= staticRoute + 'feature-app-blocker-child-1.png', alt=pageTitle)
+        img(src= staticRoute + 'feature-app-blocker-child-1.png', alt=pageTitle) 
         // img(src= staticRoute + 'feature-app-blocker-child-2.png', alt=pageTitle)
         // img(src= staticRoute + 'feature-app-blocker-child-3.png', alt=pageTitle)
 
 block content
   main.main
-    include ./components/_total.pug
 
-    section.ttls
-      h2.ttls-title We are not a galaxy, but we are also part of the universe
+    .fp-feed
+      .winf
+        .winf-info
+          .winf-title.text2._text-bold._text-black._fz-40._sm-fz-32._sm-text-center Filter bad web sites
+          .winf-desc.text._sm-fz-16._text-darkgrey._mt-30._sm-mt-20 Kroha powerful content blocking features ensure that your kids are protected from over 20 million inappropriate URLs and can see only the search results allowed by Google SafeSearch and Youtube restricted mode. You can also manually add sites to be blocked. 
+        .winf-widget
+          include ./widgets/_w1.pug
+      //- ------------------------------------------
+      .winf._mt-200
+        .winf-widget
+          include ./widgets/_w2.pug
+        .winf-info
+          .winf-title.text2._text-bold._text-black._fz-40._sm-fz-32._sm-text-center Filter bad web sites
+          .winf-desc.text._sm-fz-16._text-darkgrey._mt-30._sm-mt-20 Kroha powerful content blocking features ensure that your kids are protected from over 20 million inappropriate URLs and can see only the search results allowed by Google SafeSearch and Youtube restricted mode. You can also manually add sites to be blocked. 
+      //- ------------------------------------------
+      .winf._mt-200
+        .winf-info
+          .winf-title.text2._text-bold._text-black._fz-40._sm-fz-32._sm-text-center Filter bad web sites
+          .winf-desc.text._sm-fz-16._text-darkgrey._mt-30._sm-mt-20 Kroha powerful content blocking features ensure that your kids are protected from over 20 million inappropriate URLs and can see only the search results allowed by Google SafeSearch and Youtube restricted mode. You can also manually add sites to be blocked. 
+        .winf-widget
+          include ./widgets/_w3.pug
+      //- ------------------------------------------
+      .winf._mt-200
+        .winf-widget
+          include ./widgets/_w4.pug
+        .winf-info
+          .winf-title.text2._text-bold._text-black._fz-40._sm-fz-32._sm-text-center Filter bad web sites
+          .winf-desc.text._sm-fz-16._text-darkgrey._mt-30._sm-mt-20 Kroha powerful content blocking features ensure that your kids are protected from over 20 million inappropriate URLs and can see only the search results allowed by Google SafeSearch and Youtube restricted mode. You can also manually add sites to be blocked. 
+      //- ------------------------------------------
+      .winf._mt-200
+        .winf-info
+          .winf-title.text2._text-bold._text-black._fz-40._sm-fz-32._sm-text-center Filter bad web sites
+          .winf-desc.text._sm-fz-16._text-darkgrey._mt-30._sm-mt-20 Kroha powerful content blocking features ensure that your kids are protected from over 20 million inappropriate URLs and can see only the search results allowed by Google SafeSearch and Youtube restricted mode. You can also manually add sites to be blocked. 
+        .winf-widget
+          include ./widgets/_w5.pug
 
-    include ./components/_features-slider.pug
-
-    include ./components/_features-slider2.pug
-
-    include ./components/_articles-feed.pug
-
-    include ./components/_form-registration.pug
 
     include ./components/_install.pug
 
