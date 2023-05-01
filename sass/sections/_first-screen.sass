@@ -15,6 +15,29 @@
   &-inner
     padding-top: 150px
     padding-left: 150px
+    .fs
+      &-title, &-rowlist, &-btnbar
+        z-index: 4
+  &-grid
+    margin: 0 auto
+    max-width: 1260px
+    padding-top: 70px
+    padding-left: 30px
+    padding-right: 30px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 30px
+    z-index: 4
+    &-info
+      flex: 0 1 560px
+    &-pic
+      flex: 0 1 550px
+      max-width: 550px
+      width: 100%
+      line-height: 0
+      img
+        max-width: 100%
   &-title
     position: relative
     z-index: 4
@@ -137,6 +160,15 @@
       display: flex
       flex-direction: column
       align-items: center
+    &-grid
+      padding-top: 30px
+      flex-direction: column
+      &-info
+        order: 1
+        flex: auto
+      &-pic
+        flex: auto
+        max-width: 380px
     &-title
       text-align: center
     &-rowlist
@@ -166,6 +198,11 @@
       padding-top: 40px
       padding-left: 20px
       padding-right: 20px
+    &-grid
+      padding-left: 20px
+      padding-right: 20px
+      &-pic
+        max-width: 260px
     &-title
       font-size: 32px
     &-text

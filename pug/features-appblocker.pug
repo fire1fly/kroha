@@ -1,0 +1,105 @@
+extends ./layouts/_common.pug
+
+block variables
+  -
+    var staticRoute = './assets/static/'
+    var pageModificator = "fp"
+    var pageTitle = 'App blocker'
+    var firstScreen = true
+    var firstScreenClass = "mp-fs fp-fs"
+    var footerTop = true
+    var footerBottom = true
+    var footerBg = true
+
+block prepend scripts
+
+block prepend styles
+  link(rel="stylesheet", href="./css/swiper-bundle.min.css")
+
+block header
+  include ./components/header/_header.pug
+block firstScreen
+  .fs
+    .fs-space
+
+      .fs-space-orbital._9
+        <svg width="3300" height="3300" viewBox="0 0 3300 3300" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle opacity="0.1" cx="1650" cy="1650" r="1649.5" stroke="#053D75"/>
+        </svg>
+
+      .fs-space-orbital._8
+        <svg width="3000" height="3000" viewBox="0 0 3000 3000" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle opacity="0.1" cx="1500" cy="1500" r="1499.5" stroke="#053D75"/>
+        </svg>
+
+      .fs-space-orbital._7
+        <svg width="2700" height="2700" viewBox="0 0 2700 2700" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle opacity="0.1" cx="1350" cy="1350" r="1349.5" stroke="#053D75"/>
+        </svg>
+
+      .fs-space-orbital._6
+        <svg width="2400" height="2400" viewBox="0 0 2400 2400" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle opacity="0.1" cx="1200" cy="1200" r="1199.5" stroke="#053D75"/>
+        </svg>
+
+      .fs-space-orbital._5
+        <svg width="2150" height="2150" viewBox="0 0 2150 2150" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle opacity="0.2" cx="1050" cy="1050" r="1049.5" stroke="#053D75"/>
+        </svg>
+
+      .fs-space-orbital._4
+        <svg width="1850" height="1850" viewBox="0 0 1850 1850" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle opacity="0.3" cx="900" cy="900" r="899.5" stroke="#053D75"/>
+        </svg>
+
+      .fs-space-orbital._3
+        <svg width="1600" height="1600" viewBox="0 0 1600 1600" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle opacity="0.4" cx="750" cy="750" r="749.5" stroke="#053D75"/>
+        </svg>
+
+      .fs-space-orbital._2
+        <svg width="1300" height="1300" viewBox="0 0 1300 1300" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle opacity="0.6" cx="600" cy="600" r="599.5" stroke="#053D75"/>
+        </svg>
+
+      .fs-space-orbital._1
+        <svg width="950" height="950" viewBox="0 0 950 950" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle opacity="0.8" cx="450" cy="450" r="449.5" stroke="#053D75"/>
+        </svg>
+
+    .fs-grid
+      .fs-grid-info
+        h1.fs-title App blocker feature
+        .text._text-darkgrey._sm-fz-14._mt-30._md-text-center Want to see the location of your kids on the map? Enable location tracking to make it easier to keep track of their whereabouts. Location tracking makes it easier to arrange pick-ups and provides peace of mind to parents everywhere.
+        .fs-btnbar._mt-30._sm-mt-20
+          button.btn.btn-primary._rounded._text-upper.fs-btn(type="button") Renew license
+          button.btn.btn-play(type="button")
+            .btn-play-circle._1
+            .btn-play-circle._2
+            .btn-play-circle._3
+            .btn-icon
+              img(src="./assets/static/icon-play-primary.svg", alt="play")
+      .fs-grid-pic
+        img(src= staticRoute + 'feature-app-blocker-child-1.png', alt=pageTitle)
+        // img(src= staticRoute + 'feature-app-blocker-child-2.png', alt=pageTitle)
+        // img(src= staticRoute + 'feature-app-blocker-child-3.png', alt=pageTitle)
+
+block content
+  main.main
+    include ./components/_total.pug
+
+    section.ttls
+      h2.ttls-title We are not a galaxy, but we are also part of the universe
+
+    include ./components/_features-slider.pug
+
+    include ./components/_features-slider2.pug
+
+    include ./components/_articles-feed.pug
+
+    include ./components/_form-registration.pug
+
+    include ./components/_install.pug
+
+block footer
+  include ./components/footer/_footer.pug
