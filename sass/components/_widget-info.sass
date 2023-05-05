@@ -6,7 +6,49 @@
   &-info
     flex: 0 1 440px
   &-widget
-    // border: 1px solid red
     flex: 0 0 345px
     border-radius: 10px
     box-shadow: 0px 0px 250px rgba(72, 123, 173, 0.15), inset 0px 0px 250px rgba(72, 123, 173, 0.1)
+
+@media ( max-width: 991px )
+  .winf
+    gap: 20px
+
+@media ( max-width: 768px )
+  .winf
+    flex-direction: column
+    &-info
+      flex: auto
+      order: 1
+    &-widget
+      flex: auto
+      max-width: 300px
+      width: 100%
+
+@media ( max-width: 520px )
+  .winf
+    .pph
+      &-text
+        font-size: 12px
+      &-subtext
+        font-size: 10px
+      &-preview
+        &-small
+          width: 24px
+          height: 24px
+      &-icon
+        width: 18px
+        height: 18px
+    .prg
+      &-label
+        font-size: 10px
+    .w1-plus
+      width: 48px
+      height: 55px
+    .cal
+      &-th
+        font-size: 10px
+      &-cell
+        padding: 4px
+      td
+        height: 27px
