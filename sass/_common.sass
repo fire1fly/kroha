@@ -26,10 +26,14 @@ input, textarea
     text-transform: uppercase
   &-center
     text-align: center
+  &-right
+    text-align: right
   &-bold
     font-weight: bold
   &-primary
     color: $primary
+  &-red
+    color: $red
   &-black
     color: $black
   &-white
@@ -77,6 +81,13 @@ input, textarea
     font-size: 32px
   &-40
     font-size: 40px
+
+._transform
+  &-rotate
+    &-90
+      transform: rotate(90deg)
+    &-m90
+      transform: rotate(-90deg)
 
 ._z
   &-1
@@ -234,6 +245,8 @@ input, textarea
 
 ._gap
   &-x
+    &-5
+      column-gap: 5px
     &-10
       column-gap: 10px
     &-15
@@ -243,6 +256,8 @@ input, textarea
     &-30
       column-gap: 30px
   &-y
+    &-5
+      row-gap: 5px
     &-10
       row-gap: 10px
     &-15
@@ -251,6 +266,10 @@ input, textarea
       row-gap: 20px
     &-30
       row-gap: 30px
+
+._w
+  &-100
+    width: 100%
 
 .accordion
   &-item
@@ -339,6 +358,19 @@ input, textarea
         margin-top: 30px
       &-40
         margin-top: 40px
+    &-my
+      &-10
+        margin-top: 10px
+        margin-bottom: 10px
+      &-15
+        margin-top: 15px
+        margin-bottom: 15px
+      &-20
+        margin-top: 20px
+        margin-bottom: 20px
+      &-30
+        margin-top: 30px
+        margin-bottom: 30px
     &-py
       &-10
         padding-top: 10px

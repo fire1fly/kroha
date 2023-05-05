@@ -82,8 +82,9 @@
       flex-direction: column
       .pph
         &-box
-          &:not(:nth-of-type(1))
-            margin-top: 4px
+          &:not(._inrow)
+            &:not(:nth-of-type(1))
+              margin-top: 4px
   &-chapter
     display: flex
     align-items: center
@@ -104,8 +105,8 @@
       width: 32px
       height: 32px
       img, svg
-        max-width: 100%
-        max-height: 100%
+        width: 100%
+        height: 100%
   &-grid
     display: grid
     &._type
@@ -114,6 +115,13 @@
         gap: 10px
       &-2
         grid-template-columns: 32px 1fr 24px
+        gap: 10px
+        .pph-text
+          overflow: hidden
+          white-space: nowrap
+          text-overflow: ellipsis
+      &-3
+        grid-template-columns: min-content 1fr auto
         gap: 10px
         .pph-text
           overflow: hidden
@@ -156,8 +164,8 @@
         width: 24px
         height: 24px
         img, svg
-          max-width: 100%
-          max-height: 100%
+          width: 100%
+          height: 100%
         ._active
           &-stroke
             +transition(stroke, 0.2s)

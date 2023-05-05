@@ -573,11 +573,17 @@ input, textarea {
 ._text-center {
   text-align: center;
 }
+._text-right {
+  text-align: right;
+}
 ._text-bold {
   font-weight: bold;
 }
 ._text-primary {
   color: #0876E4;
+}
+._text-red {
+  color: #FB668A;
 }
 ._text-black {
   color: #0F1622;
@@ -642,6 +648,17 @@ input, textarea {
 }
 ._fz-40 {
   font-size: 40px;
+}
+
+._transform-rotate-90 {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+._transform-rotate-m90 {
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 
 ._z-1 {
@@ -860,6 +877,11 @@ input, textarea {
       flex-shrink: 1;
 }
 
+._gap-x-5 {
+  -webkit-column-gap: 5px;
+     -moz-column-gap: 5px;
+          column-gap: 5px;
+}
 ._gap-x-10 {
   -webkit-column-gap: 10px;
      -moz-column-gap: 10px;
@@ -880,6 +902,9 @@ input, textarea {
      -moz-column-gap: 30px;
           column-gap: 30px;
 }
+._gap-y-5 {
+  row-gap: 5px;
+}
 ._gap-y-10 {
   row-gap: 10px;
 }
@@ -891,6 +916,10 @@ input, textarea {
 }
 ._gap-y-30 {
   row-gap: 30px;
+}
+
+._w-100 {
+  width: 100%;
 }
 
 .accordion-item:not(.accordion-item_show) .accordion-body {
@@ -1006,6 +1035,22 @@ input, textarea {
   }
   ._sm-mt-40 {
     margin-top: 40px;
+  }
+  ._sm-my-10 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  ._sm-my-15 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  ._sm-my-20 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  ._sm-my-30 {
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
   ._sm-py-10 {
     padding-top: 10px;
@@ -2005,6 +2050,55 @@ input, textarea {
   border-radius: 3px;
   width: 100%;
   height: 100%;
+}
+
+.wkch {
+  position: relative;
+}
+.wkch table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+}
+.wkch tfoot th {
+  padding-top: 5px;
+  height: 22px;
+}
+.wkch th {
+  font-weight: normal;
+}
+.wkch-cell {
+  border: 1px solid #E9EDF4;
+  height: 32px;
+}
+.wkch-cell-label {
+  width: 40px;
+  padding-left: 5px;
+  white-space: nowrap;
+}
+.wkch-chart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - 40px);
+  height: calc(100% - 22px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.wkch-chart-col {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 8px;
+          flex: 0 0 8px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  width: 8px;
+  background-color: #0876E4;
 }
 
 .tc-grid {
@@ -4065,7 +4159,7 @@ input, textarea {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.pph-box-feed .pph-box:not(:nth-of-type(1)) {
+.pph-box-feed .pph-box:not(._inrow):not(:nth-of-type(1)) {
   margin-top: 4px;
 }
 .pph-chapter {
@@ -4104,8 +4198,8 @@ input, textarea {
   height: 32px;
 }
 .pph-preview-small img, .pph-preview-small svg {
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
 }
 .pph-grid {
   display: grid;
@@ -4119,6 +4213,17 @@ input, textarea {
   gap: 10px;
 }
 .pph-grid._type-2 .pph-text {
+  overflow: hidden;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+}
+.pph-grid._type-3 {
+  grid-template-columns: -webkit-min-content 1fr auto;
+  grid-template-columns: min-content 1fr auto;
+  gap: 10px;
+}
+.pph-grid._type-3 .pph-text {
   overflow: hidden;
   white-space: nowrap;
   -o-text-overflow: ellipsis;
@@ -4176,8 +4281,8 @@ input, textarea {
   height: 24px;
 }
 .pph-botbar-item-icon img, .pph-botbar-item-icon svg {
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
 }
 .pph-botbar-item-icon ._active-stroke {
   -webkit-transition: stroke 0.2s ease-in-out 0s;
@@ -4332,11 +4437,13 @@ input, textarea {
     font-size: 16px;
   }
 }
+.fp__inner {
+  overflow: hidden;
+}
 .fp-feed {
   padding: 200px 30px;
   margin: 0 auto;
   max-width: 970px;
-  overflow: hidden;
 }
 
 @media (max-width: 991px) {
