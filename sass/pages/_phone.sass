@@ -178,3 +178,18 @@
         line-height: 1.3
         color: $grey
         +transition(color, 0.2s)
+  &-yt
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 10px
+    &-preview
+      border-radius: 4px
+      height: 93px
+      line-height: 0
+      overflow: hidden
+      img, svg
+        width: 100%
+        height: 100%
+        object-fit: contain
+    &-info
+      align-self: center
