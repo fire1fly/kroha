@@ -918,8 +918,20 @@ input, textarea {
   row-gap: 30px;
 }
 
-._w-100 {
+._w-100p {
   width: 100%;
+}
+._w-20 {
+  width: 20px;
+}
+._w-30 {
+  width: 30px;
+}
+._w-40 {
+  width: 40px;
+}
+._w-50 {
+  width: 50px;
 }
 
 .accordion-item:not(.accordion-item_show) .accordion-body {
@@ -1148,6 +1160,21 @@ input, textarea {
   }
   ._sm-gap-y-30 {
     row-gap: 30px;
+  }
+  ._sm-w-100p {
+    width: 100%;
+  }
+  ._sm-w-20 {
+    width: 20px;
+  }
+  ._sm-w-30 {
+    width: 30px;
+  }
+  ._sm-w-40 {
+    width: 40px;
+  }
+  ._sm-w-50 {
+    width: 50px;
   }
 }
 .phsgn {
@@ -3059,12 +3086,25 @@ input, textarea {
           flex: 0 1 440px;
 }
 .winf-widget {
+  position: relative;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 345px;
           flex: 0 0 345px;
   border-radius: 10px;
-  -webkit-box-shadow: 0px 0px 250px rgba(72, 123, 173, 0.15), inset 0px 0px 250px rgba(72, 123, 173, 0.1);
-          box-shadow: 0px 0px 250px rgba(72, 123, 173, 0.15), inset 0px 0px 250px rgba(72, 123, 173, 0.1);
+}
+.winf-widget::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1px;
+  height: 1px;
+  -webkit-box-shadow: 0px 0px 250px 250px rgba(72, 123, 173, 0.1);
+          box-shadow: 0px 0px 250px 250px rgba(72, 123, 173, 0.1);
+}
+.winf-widget > div {
+  position: relative;
+  z-index: 2;
 }
 
 @media (max-width: 991px) {
