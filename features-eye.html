@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="./js/accordion.js"></script>
     <script defer src="./js/mobileMenu.js"></script>
     <script defer src="./js/dropdown.js"></script>
     <link rel="stylesheet" href="./css/swiper-bundle.min.css">
@@ -156,32 +157,55 @@
               </div>
               <div class="winf _mt-200 _md-mt-150">
                 <div class="winf-widget">
-                  <div class="w12">
+                  <div class="w16">
                     <div class="pph-box-feed">
-                      <div class="pph-box _py-10 _px-20">
+                      <div class="pph-box _py-15 _px-15">
                         <div class="_df _justify-between _align-center _gap-x-10">
-                          <div class="text _fz-16 _sm-fz-12 _text-darkgrey _flex-grow-1">Введите название видео / URL</div>
-                          <div class="pph-icon _flex-shrink-0"><img src="./assets/static/icon-zoom-primary-2.svg" alt="icon"></div>
+                          <div class="pph-icon _flex-shrink-0"><img src="./assets/static/icon-question-primary.svg" alt="icon"></div>
+                          <div class="text _fz-16 _sm-fz-14 _text-black _flex-grow-1">Ночной режим</div><img class="_flex-shrink-0 _w-50 _sm-w-40" src="./assets/static/icon-switch.svg" alt="icon">
                         </div>
                       </div>
-                      <div class="pph-subtext _text-center _text-darkgrey _my-15 _sm-my-10">Заблокированые видео:</div>
                       <div class="pph-box _py-10 _px-15">
-                        <div class="pph-yt">
-                          <div class="pph-yt-preview"><img src="./assets/static/yt-preview-example-3.png" alt="preview"></div>
-                          <div class="pph-yt-info">
-                            <div class="text _fz-14 _sm-fz-12 _text-black _text-bold">Россия готовит признание поражения / как старий маразм ...</div>
-                            <div class="text _fz-12 _sm-fz-10 _text-darkgrey">NEXTA live</div>
-                            <div class="text _fz-12 _sm-fz-10 _text-darkgrey">520 тис. просмотр</div>
+                        <div class="_df _justify-between _align-center _gap-x-10">
+                          <div class="_flex-grow-1 _df _flex-direction-column _align-center _justify-start"><img class="_w-32" src="./assets/static/icon-moon-primary.svg" alt="icon">
+                            <div class="text _fz-10 _sm-fz-8 _text-grey _text-center _mt-5">Луна</div>
+                          </div>
+                          <div class="_flex-grow-1 _df _flex-direction-column _align-center _justify-start"><img class="_w-32" src="./assets/static/icon-candle.svg" alt="icon">
+                            <div class="text _fz-10 _sm-fz-8 _text-grey _text-center _mt-5">Свеча</div>
+                          </div>
+                          <div class="_flex-grow-1 _df _flex-direction-column _align-center _justify-start"><img class="_w-32" src="./assets/static/icon-sunrise.svg" alt="icon">
+                            <div class="text _fz-10 _sm-fz-8 _text-grey _text-center _mt-5">Рассвет</div>
+                          </div>
+                          <div class="_flex-grow-1 _df _flex-direction-column _align-center _justify-start"><img class="_w-32" src="./assets/static/icon-lamp-incandescent.svg" alt="icon">
+                            <div class="text _fz-10 _sm-fz-8 _text-grey _text-center _mt-5">Лампа <br> накал.</div>
+                          </div>
+                          <div class="_flex-grow-1 _df _flex-direction-column _align-center _justify-start"><img class="_w-32" src="./assets/static/icon-lamp-led.svg" alt="icon">
+                            <div class="text _fz-10 _sm-fz-8 _text-grey _text-center _mt-5">Лампа <br> дневная</div>
                           </div>
                         </div>
                       </div>
-                      <div class="pph-box _py-10 _px-15">
-                        <div class="pph-yt">
-                          <div class="pph-yt-preview"><img src="./assets/static/yt-preview-example-2.png" alt="preview"></div>
-                          <div class="pph-yt-info">
-                            <div class="text _fz-14 _sm-fz-12 _text-black _text-bold">Как играть в Mario? Все секреты в одном видео</div>
-                            <div class="text _fz-12 _sm-fz-10 _text-darkgrey">Сomputer_Games</div>
-                            <div class="text _fz-12 _sm-fz-10 _text-darkgrey">520 тис. просмотр</div>
+                      <div class="pph-box _py-20 _sm-py-15 _px-15">
+                        <div class="_df _justify-between _align-center _gap-x-10">
+                          <div class="text _fz-16 _sm-fz-14 _text-black _flex-shrink-50p">Сила света (30%)</div>
+                          <div class="_flex-basis-50p _w-100p _flex-shrink-1 _lh-0"><img class="_w-100p" src="./assets/static/range-example-2.svg" alt="icon"></div>
+                        </div>
+                      </div>
+                      <div class="pph-box _py-20 _sm-py-15 _px-15">
+                        <div class="_df _justify-between _align-center _gap-x-10">
+                          <div class="text _fz-16 _sm-fz-14 _text-black">Температура цвета</div>
+                          <div class="text _fz-16 _sm-fz-14 _text-primary _text-bold">3200k</div>
+                        </div>
+                      </div>
+                      <div class="pph-box _py-15 _px-15">
+                        <div class="_df _justify-between _align-center _gap-x-10">
+                          <div class="text _fz-16 _sm-fz-14 _text-black _flex-grow-1">Установить авто таймер</div><img class="_flex-shrink-0 _w-50 _sm-w-40" src="./assets/static/icon-switch.svg" alt="icon">
+                        </div>
+                        <div class="_df _justify-between _align-center _gap-x-20 _sm-gap-x-15 _mt-20 _sm-mt-15">
+                          <div class="pph-box _grey _px-20 _sm-px-15 _py-10 _flex-grow-1">
+                            <div class="text _fz-14 _text-darkgrey">С: 20:30</div>
+                          </div>
+                          <div class="pph-box _grey _inrow _px-20 _sm-px-15 _py-10 _flex-grow-1">
+                            <div class="text _fz-14 _text-darkgrey">До: 06:30</div>
                           </div>
                         </div>
                       </div>
@@ -199,36 +223,48 @@
                   <div class="winf-desc text _sm-fz-16 _text-darkgrey _mt-30 _sm-mt-20">Kroha powerful content blocking features ensure that your kids are protected from over 20 million inappropriate URLs and can see only the search results allowed by Google SafeSearch and Youtube restricted mode. You can also manually add sites to be blocked. </div>
                 </div>
                 <div class="winf-widget">
-                  <div class="w12">
+                  <div class="w2">
                     <div class="pph-box-feed">
                       <div class="pph-box _py-10 _px-15">
-                        <div class="pph-yt">
-                          <div class="pph-yt-preview"><img src="./assets/static/yt-preview-example-1.png" alt="preview"></div>
-                          <div class="pph-yt-info">
-                            <div class="text _fz-14 _sm-fz-12 _text-black _text-bold">1 серия 3 сезон “Миньоны на охоте”</div>
-                            <div class="text _fz-12 _sm-fz-10 _text-darkgrey">Cartoon</div>
-                            <div class="text _fz-12 _sm-fz-10 _text-darkgrey">1 млн. просмотр</div>
-                          </div>
+                        <div class="pph-grid _type-2">
+                          <div class="pph-preview-small"><img src="./assets/static/game-logo-hayday.png" alt="game"></div>
+                          <div class="pph-text _text-darkgrey _align-center">HayDay</div>
+                          <div class="pph-icon"><img src="./assets/static/icon-hexagon-plus-primary.svg" alt="plus"></div>
                         </div>
                       </div>
                       <div class="pph-box _py-10 _px-15">
-                        <div class="pph-yt">
-                          <div class="pph-yt-preview"><img src="./assets/static/yt-preview-example-2.png" alt="preview"></div>
-                          <div class="pph-yt-info">
-                            <div class="text _fz-14 _sm-fz-12 _text-black _text-bold">Как играть в Mario? Все секреты в одном видео</div>
-                            <div class="text _fz-12 _sm-fz-10 _text-darkgrey">Сomputer_Games</div>
-                            <div class="text _fz-12 _sm-fz-10 _text-darkgrey">520 тис. просмотр</div>
-                          </div>
+                        <div class="pph-grid _type-2">
+                          <div class="pph-preview-small"><img src="./assets/static/game-logo-bow.png" alt="game"></div>
+                          <div class="pph-text _text-darkgrey _align-center">Battle of Warships: Naval Blitz</div>
+                          <div class="pph-icon"><img src="./assets/static/icon-hexagon-plus-primary.svg" alt="plus"></div>
                         </div>
                       </div>
                       <div class="pph-box _py-10 _px-15">
-                        <div class="pph-yt">
-                          <div class="pph-yt-preview"><img src="./assets/static/yt-preview-example-1.png" alt="preview"></div>
-                          <div class="pph-yt-info">
-                            <div class="text _fz-14 _sm-fz-12 _text-black _text-bold">1 серия 3 сезон “Миньоны на охоте”</div>
-                            <div class="text _fz-12 _sm-fz-10 _text-darkgrey">Cartoon</div>
-                            <div class="text _fz-12 _sm-fz-10 _text-darkgrey">1 млн. просмотр</div>
-                          </div>
+                        <div class="pph-grid _type-2">
+                          <div class="pph-preview-small"><img src="./assets/static/game-logo-supermario.png" alt="game"></div>
+                          <div class="pph-text _text-darkgrey _align-center">Super Mario Run</div>
+                          <div class="pph-icon"><img src="./assets/static/icon-hexagon-plus-primary.svg" alt="plus"></div>
+                        </div>
+                      </div>
+                      <div class="pph-box _py-10 _px-15">
+                        <div class="pph-grid _type-2">
+                          <div class="pph-preview-small"><img src="./assets/static/game-logo-mafiacity.png" alt="game"></div>
+                          <div class="pph-text _text-darkgrey _align-center">Mafia City</div>
+                          <div class="pph-icon"><img src="./assets/static/icon-hexagon-plus-primary.svg" alt="plus"></div>
+                        </div>
+                      </div>
+                      <div class="pph-box _py-10 _px-15">
+                        <div class="pph-grid _type-2">
+                          <div class="pph-preview-small"><img src="./assets/static/game-logo-angrybirds.png" alt="game"></div>
+                          <div class="pph-text _text-darkgrey _align-center">Angry Birds Friends - Arcad...</div>
+                          <div class="pph-icon"><img src="./assets/static/icon-hexagon-plus-primary.svg" alt="plus"></div>
+                        </div>
+                      </div>
+                      <div class="pph-box _py-10 _px-15">
+                        <div class="pph-grid _type-2">
+                          <div class="pph-preview-small"><img src="./assets/static/game-logo-badpiggies.png" alt="game"></div>
+                          <div class="pph-text _text-darkgrey _align-center">Bad Piggies HD</div>
+                          <div class="pph-icon"><img src="./assets/static/icon-hexagon-plus-primary.svg" alt="plus"></div>
                         </div>
                       </div>
                     </div>
@@ -237,33 +273,41 @@
               </div>
               <div class="winf _mt-200 _md-mt-150">
                 <div class="winf-widget">
-                  <div class="w12">
+                  <div class="w16">
                     <div class="pph-box-feed">
-                      <div class="pph-box _py-10 _px-20">
+                      <div class="pph-box _py-20 _sm-py-15 _px-15">
                         <div class="_df _justify-between _align-center _gap-x-10">
-                          <div class="text _fz-16 _sm-fz-12 _text-darkgrey _flex-grow-1">Введите название видео / URL</div>
-                          <div class="pph-icon _flex-shrink-0"><img src="./assets/static/icon-zoom-primary-2.svg" alt="icon"></div>
+                          <div class="pph-icon _flex-shrink-0"><img src="./assets/static/icon-moon-primary.svg" alt="icon"></div>
+                          <div class="text _fz-16 _sm-fz-14 _text-black _flex-grow-1">Луна</div>
+                          <div class="text _fz-16 _sm-fz-14 _text-primary _text-bold">3200k</div>
                         </div>
                       </div>
-                      <div class="pph-subtext _text-center _text-darkgrey _my-15 _sm-my-10">Заблокированые видео:</div>
-                      <div class="pph-box _py-10 _px-15">
-                        <div class="pph-yt">
-                          <div class="pph-yt-preview"><img src="./assets/static/yt-preview-example-3.png" alt="preview"></div>
-                          <div class="pph-yt-info">
-                            <div class="text _fz-14 _sm-fz-12 _text-black _text-bold">Россия готовит признание поражения / как старий маразм ...</div>
-                            <div class="text _fz-12 _sm-fz-10 _text-darkgrey">NEXTA live</div>
-                            <div class="text _fz-12 _sm-fz-10 _text-darkgrey">520 тис. просмотр</div>
-                          </div>
+                      <div class="pph-box _py-20 _sm-py-15 _px-15">
+                        <div class="_df _justify-between _align-center _gap-x-10">
+                          <div class="pph-icon _flex-shrink-0"><img src="./assets/static/icon-candle-primary.svg" alt="icon"></div>
+                          <div class="text _fz-16 _sm-fz-14 _text-black _flex-grow-1">Свеча</div>
+                          <div class="text _fz-16 _sm-fz-14 _text-primary _text-bold">1800 К</div>
                         </div>
                       </div>
-                      <div class="pph-box _py-10 _px-15">
-                        <div class="pph-yt">
-                          <div class="pph-yt-preview"><img src="./assets/static/yt-preview-example-2.png" alt="preview"></div>
-                          <div class="pph-yt-info">
-                            <div class="text _fz-14 _sm-fz-12 _text-black _text-bold">Как играть в Mario? Все секреты в одном видео</div>
-                            <div class="text _fz-12 _sm-fz-10 _text-darkgrey">Сomputer_Games</div>
-                            <div class="text _fz-12 _sm-fz-10 _text-darkgrey">520 тис. просмотр</div>
-                          </div>
+                      <div class="pph-box _py-20 _sm-py-15 _px-15">
+                        <div class="_df _justify-between _align-center _gap-x-10">
+                          <div class="pph-icon _flex-shrink-0"><img src="./assets/static/icon-sunrise-primary.svg" alt="icon"></div>
+                          <div class="text _fz-16 _sm-fz-14 _text-black _flex-grow-1">Рассвет</div>
+                          <div class="text _fz-16 _sm-fz-14 _text-primary _text-bold">2000 К</div>
+                        </div>
+                      </div>
+                      <div class="pph-box _py-20 _sm-py-15 _px-15">
+                        <div class="_df _justify-between _align-center _gap-x-10">
+                          <div class="pph-icon _flex-shrink-0"><img src="./assets/static/icon-lamp-incandescent-primary.svg" alt="icon"></div>
+                          <div class="text _fz-16 _sm-fz-14 _text-black _flex-grow-1">Лампа дневного света</div>
+                          <div class="text _fz-16 _sm-fz-14 _text-primary _text-bold">2700 К</div>
+                        </div>
+                      </div>
+                      <div class="pph-box _py-20 _sm-py-15 _px-15">
+                        <div class="_df _justify-between _align-center _gap-x-10">
+                          <div class="pph-icon _flex-shrink-0"><img src="./assets/static/icon-lamp-led-primary.svg" alt="icon"></div>
+                          <div class="text _fz-16 _sm-fz-14 _text-black _flex-grow-1">Лампа дневного света</div>
+                          <div class="text _fz-16 _sm-fz-14 _text-primary _text-bold">3400 К</div>
                         </div>
                       </div>
                     </div>

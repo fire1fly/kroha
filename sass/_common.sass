@@ -44,6 +44,10 @@ input, textarea
     color: $darkgrey
   &-darkblue
     color: $darkblue
+  &-ellipsis
+    overflow: hidden
+    white-space: nowrap
+    text-overflow: ellipsis
 
 ._cursor
   &-pointer
@@ -81,6 +85,18 @@ input, textarea
     font-size: 32px
   &-40
     font-size: 40px
+
+._lh
+  &-0
+    line-height: 0
+  &-1d2
+    line-height: 1.2
+  &-1d3
+    line-height: 1.3
+  &-1d4
+    line-height: 1.4
+  &-1d5
+    line-height: 1.5
 
 ._transform
   &-rotate
@@ -150,6 +166,8 @@ input, textarea
     margin-bottom: 40px
 
 ._mt
+  &-5
+    margin-top: 5px
   &-10
     margin-top: 10px
   &-15
@@ -176,6 +194,11 @@ input, textarea
     margin-bottom: 30px
   &-40
     margin-bottom: 40px
+
+._mr-auto
+  margin-right: auto
+._ml-auto
+  margin-left: auto
 
 ._py
   &-10
@@ -213,6 +236,10 @@ input, textarea
   &ib
     display: inline-block
 
+._flex-direction
+  &-column
+    flex-direction: column
+
 ._align
   &-start
     align-items: flex-start
@@ -243,6 +270,13 @@ input, textarea
     &-1
       flex-shrink: 1
 
+._flex
+  &-basis
+    &-100p
+      flex-basis: 100%
+    &-50p
+      flex-basis: 50%
+
 ._gap
   &-x
     &-5
@@ -272,8 +306,12 @@ input, textarea
     width: 100%
   &-20
     width: 20px
+  &-24
+    width: 24px
   &-30
     width: 30px
+  &-32
+    width: 32px
   &-40
     width: 40px
   &-50
@@ -356,6 +394,8 @@ input, textarea
 @media ( max-width: 520px )
   ._sm
     &-mt
+      &-5
+        margin-top: 5px
       &-10
         margin-top: 10px
       &-15
@@ -406,6 +446,8 @@ input, textarea
         padding-left: 30px
         padding-right: 30px
     &-fz
+      &-8
+        font-size: 8px
       &-10
         font-size: 10px
       &-12
@@ -453,8 +495,12 @@ input, textarea
         width: 100%
       &-20
         width: 20px
+      &-24
+        width: 24px
       &-30
         width: 30px
+      &-32
+        width: 32px
       &-40
         width: 40px
       &-50

@@ -600,6 +600,12 @@ input, textarea {
 ._text-darkblue {
   color: #1A3564;
 }
+._text-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+}
 
 ._cursor-pointer {
   cursor: pointer;
@@ -648,6 +654,22 @@ input, textarea {
 }
 ._fz-40 {
   font-size: 40px;
+}
+
+._lh-0 {
+  line-height: 0;
+}
+._lh-1d2 {
+  line-height: 1.2;
+}
+._lh-1d3 {
+  line-height: 1.3;
+}
+._lh-1d4 {
+  line-height: 1.4;
+}
+._lh-1d5 {
+  line-height: 1.5;
 }
 
 ._transform-rotate-90 {
@@ -737,6 +759,9 @@ input, textarea {
   margin-bottom: 40px;
 }
 
+._mt-5 {
+  margin-top: 5px;
+}
 ._mt-10 {
   margin-top: 10px;
 }
@@ -773,6 +798,14 @@ input, textarea {
 }
 ._mb-40 {
   margin-bottom: 40px;
+}
+
+._mr-auto {
+  margin-right: auto;
+}
+
+._ml-auto {
+  margin-left: auto;
 }
 
 ._py-10 {
@@ -819,6 +852,13 @@ input, textarea {
 }
 ._dib {
   display: inline-block;
+}
+
+._flex-direction-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 ._align-start {
@@ -877,6 +917,15 @@ input, textarea {
       flex-shrink: 1;
 }
 
+._flex-basis-100p {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+._flex-basis-50p {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
 ._gap-x-5 {
   -webkit-column-gap: 5px;
      -moz-column-gap: 5px;
@@ -924,8 +973,14 @@ input, textarea {
 ._w-20 {
   width: 20px;
 }
+._w-24 {
+  width: 24px;
+}
 ._w-30 {
   width: 30px;
+}
+._w-32 {
+  width: 32px;
 }
 ._w-40 {
   width: 40px;
@@ -1033,6 +1088,9 @@ input, textarea {
   }
 }
 @media (max-width: 520px) {
+  ._sm-mt-5 {
+    margin-top: 5px;
+  }
   ._sm-mt-10 {
     margin-top: 10px;
   }
@@ -1095,6 +1153,9 @@ input, textarea {
   ._sm-px-30 {
     padding-left: 30px;
     padding-right: 30px;
+  }
+  ._sm-fz-8 {
+    font-size: 8px;
   }
   ._sm-fz-10 {
     font-size: 10px;
@@ -1167,8 +1228,14 @@ input, textarea {
   ._sm-w-20 {
     width: 20px;
   }
+  ._sm-w-24 {
+    width: 24px;
+  }
   ._sm-w-30 {
     width: 30px;
+  }
+  ._sm-w-32 {
+    width: 32px;
   }
   ._sm-w-40 {
     width: 40px;
@@ -4195,6 +4262,12 @@ input, textarea {
 .pph-box {
   border-radius: 10px;
   background-color: #FFFFFF;
+}
+.pph-box._grey {
+  background-color: #F0F3F6;
+}
+.pph-box._primary {
+  background-color: #0876E4;
 }
 .pph-box-feed {
   display: -webkit-box;
