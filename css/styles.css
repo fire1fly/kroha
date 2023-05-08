@@ -3147,6 +3147,9 @@ input, textarea {
     height: 24px;
   }
   .winf .pph-icon {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 18px;
+            flex: 0 0 18px;
     width: 18px;
     height: 18px;
   }
