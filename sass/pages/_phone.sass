@@ -81,6 +81,8 @@
       background-color: #F0F3F6
     &._primary
       background-color: $primary
+    &._gradient-grey
+      +gradient-grey
     &-feed
       display: flex
       flex-direction: column
@@ -201,3 +203,24 @@
         object-fit: contain
     &-info
       align-self: center
+  &-map
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    &-pic
+      position: absolute
+      top: 0
+      left: 0
+      z-index: 1
+      width: 100%
+      height: 100%
+      line-height: 0
+      img, svg
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: right center
+    &-bar
+      position: relative
+      z-index: 2

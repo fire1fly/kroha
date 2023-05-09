@@ -812,6 +812,10 @@ input, textarea {
   margin-left: auto;
 }
 
+._py-5 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
 ._py-10 {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -829,6 +833,10 @@ input, textarea {
   padding-bottom: 30px;
 }
 
+._px-5 {
+  padding-left: 5px;
+  padding-right: 5px;
+}
 ._px-10 {
   padding-left: 10px;
   padding-right: 10px;
@@ -1126,6 +1134,10 @@ input, textarea {
     margin-top: 30px;
     margin-bottom: 30px;
   }
+  ._sm-py-5 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
   ._sm-py-10 {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -1141,6 +1153,10 @@ input, textarea {
   ._sm-py-30 {
     padding-top: 30px;
     padding-bottom: 30px;
+  }
+  ._sm-px-5 {
+    padding-left: 5px;
+    padding-right: 5px;
   }
   ._sm-px-10 {
     padding-left: 10px;
@@ -3177,6 +3193,9 @@ input, textarea {
   position: relative;
   z-index: 2;
 }
+.winf .pph-map {
+  height: 390px;
+}
 
 @media (max-width: 991px) {
   .winf {
@@ -3233,6 +3252,9 @@ input, textarea {
   .winf .pph-box-close img, .winf .pph-box-close svg {
     width: 100%;
     height: 100%;
+  }
+  .winf .pph-map {
+    height: 320px;
   }
   .winf .prg-label {
     font-size: 10px;
@@ -4283,6 +4305,10 @@ input, textarea {
 .pph-box._primary {
   background-color: #0876E4;
 }
+.pph-box._gradient-grey {
+  background: -o-linear-gradient(318deg, #E9EDF4 0%, #E8EDF7 100%);
+  background: linear-gradient(132deg, #E9EDF4 0%, #E8EDF7 100%);
+}
 .pph-box-feed {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4462,6 +4488,40 @@ input, textarea {
 .pph-yt-info {
   -ms-flex-item-align: center;
       align-self: center;
+}
+.pph-map {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.pph-map-pic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  line-height: 0;
+}
+.pph-map-pic img, .pph-map-pic svg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: right center;
+     object-position: right center;
+}
+.pph-map-bar {
+  position: relative;
+  z-index: 2;
 }
 
 .punlock {
