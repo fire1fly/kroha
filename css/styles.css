@@ -3510,6 +3510,132 @@ input, textarea {
           transform: translate(50%, 60%);
   line-height: 0;
 }
+.fs-space-orbital-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+}
+.fs-space-orbital._1 .fs-space-orbital-inner {
+  -webkit-animation: orbitalRotate 6s linear 0s infinite normal forwards;
+          animation: orbitalRotate 6s linear 0s infinite normal forwards;
+}
+.fs-space-orbital._2 .fs-space-orbital-inner {
+  animation: orbitalRotate 6s linear 0s infinite reverse forwards;
+}
+.fs-space-orbital._2 .fs-space-orbital-star {
+  position: absolute;
+  top: 340px;
+  left: 120px;
+}
+.fs-space-orbital._3 .fs-space-orbital-inner {
+  animation: orbitalRotate 6s linear 0s infinite reverse forwards;
+}
+.fs-space-orbital._3 .fs-space-orbital-star {
+  position: absolute;
+  top: 540px;
+  left: 84px;
+}
+.fs-space-orbital._4 .fs-space-orbital-inner {
+  -webkit-animation: orbitalRotate 9s linear 0s infinite normal forwards;
+          animation: orbitalRotate 9s linear 0s infinite normal forwards;
+}
+.fs-space-orbital._4 .fs-space-orbital-star._1 {
+  position: absolute;
+  top: 210px;
+  left: 360px;
+}
+.fs-space-orbital._4 .fs-space-orbital-star._2 {
+  position: absolute;
+  top: 500px;
+  left: 120px;
+}
+.fs-space-orbital._4 .fs-space-orbital-satellite {
+  position: absolute;
+  top: 650px;
+  left: 25px;
+}
+.fs-space-orbital._5 .fs-space-orbital-inner {
+  animation: orbitalRotate 12s linear 0s infinite reverse forwards;
+}
+.fs-space-orbital._5 .fs-space-orbital-star {
+  position: absolute;
+  top: 120px;
+  left: 615px;
+}
+.fs-space-orbital._6 .fs-space-orbital-inner {
+  -webkit-animation: orbitalRotate 12s linear 0s infinite normal forwards;
+          animation: orbitalRotate 12s linear 0s infinite normal forwards;
+}
+.fs-space-orbital._6 .fs-space-orbital-star {
+  position: absolute;
+  top: 700px;
+  left: 100px;
+}
+.fs-space-orbital._7 .fs-space-orbital-inner {
+  animation: orbitalRotate 6s linear 0s infinite reverse forwards;
+}
+.fs-space-orbital._7 .fs-space-orbital-star {
+  position: absolute;
+  top: 401px;
+  left: 376px;
+}
+.fs-space-orbital._8 .fs-space-orbital-inner {
+  -webkit-animation: orbitalRotate 8s linear 0s infinite normal forwards;
+          animation: orbitalRotate 8s linear 0s infinite normal forwards;
+}
+.fs-space-orbital._8 .fs-space-orbital-star {
+  position: absolute;
+  top: 620px;
+  left: 275px;
+}
+.fs-space-orbital-discord {
+  position: absolute;
+  top: -10px;
+  left: 220px;
+}
+.fs-space-orbital-tiktok {
+  position: absolute;
+  top: 150px;
+  left: -20px;
+}
+.fs-space-orbital-inst {
+  position: absolute;
+  top: -20px;
+  left: 400px;
+}
+.fs-space-orbital-earth {
+  position: absolute;
+  top: 150px;
+  left: 200px;
+}
+.fs-space-orbital-yt {
+  position: absolute;
+  top: 200px;
+  left: 140px;
+}
+.fs-space-orbital-whtsp {
+  position: absolute;
+  top: -40px;
+  left: 420px;
+}
+.fs-space-orbital-vbr {
+  position: absolute;
+  top: 60px;
+  left: 450px;
+}
+.fs-space-orbital-tlg {
+  position: absolute;
+  top: 290px;
+  left: 160px;
+}
+.fs-space-orbital-astr {
+  position: absolute;
+  top: 380px;
+  left: 155px;
+}
 
 @-webkit-keyframes sunGlow {
   0% {
@@ -3546,6 +3672,26 @@ input, textarea {
   100% {
     -webkit-box-shadow: 0px 0px 200px 300px rgba(248, 178, 44, 0.2);
             box-shadow: 0px 0px 200px 300px rgba(248, 178, 44, 0.2);
+  }
+}
+@-webkit-keyframes orbitalRotate {
+  0% {
+    -webkit-transform: rotate(-60deg);
+            transform: rotate(-60deg);
+  }
+  100% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+}
+@keyframes orbitalRotate {
+  0% {
+    -webkit-transform: rotate(-60deg);
+            transform: rotate(-60deg);
+  }
+  100% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
   }
 }
 @media (max-width: 1200px) {
