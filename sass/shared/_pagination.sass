@@ -1,0 +1,32 @@
+.pag
+  display: flex
+  align-items: center
+  gap: 20px
+  &-item
+    flex: 0 0 auto
+  &-arrow
+    line-height: 0
+    img, svg
+      max-width: 100%
+  &-btn
+    border: 1px solid transparent
+    border-radius: 50%
+    width: 46px
+    height: 46px
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: transparent
+    +opensans-reg
+    color: $black
+    font-size: 18px
+    &._active
+      border-color: $primary
+      color: $primary
+
+@media ( max-width: 520px )
+  .pag
+    &-btn
+      width: 40px
+      height: 40px
+      font-size: 16px

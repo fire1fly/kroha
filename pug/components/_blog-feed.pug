@@ -1,0 +1,15 @@
+.bf
+  .bf-container
+    h1.bf-title.text2._fz-48._sm-fz-32._text-center._text-black Recent articles
+    .bf-grid._mt-60._sm-mt-50
+      - for (var i = 1; i <= 6; i++)
+        .bf-art
+          .bf-art-preview
+            img(src=staticRoute + "article-preview-example-" + i + ".png", alt="preview")
+          .bf-art-title.text2._fz-24._sm-fz-18._lh-1d3._text-black._text-bold._mt-20 App blocker feature
+          .bg-art-desc.text._fz-16._sm-fz-14._text-darkgrey._mt-10 Want to see the location of your kids on the map? Enable location tracking to make it easier to keep track of their whereabouts.
+          a(href="#")._dif._align-center._gap-x-10._mt-20
+            .text._fz-16._sm-fz-14._lh-1d5._text-primary Learn more
+            img(src=staticRoute + "icon-arrow-right-primary.svg", alt="icon")
+    .bf-pag._mt-60._sm-mt-50._df._justify-center
+      include ./_pagination.pug

@@ -98,7 +98,6 @@
     left: 0
     width: 100%
     height: 100%
-    will-change: contents
     ._link
       cursor: pointer
     &-sun
@@ -114,124 +113,21 @@
         height: 1px
         box-shadow: 0px 0px 600px 300px rgba(#F8B22C, 0.2)
         animation: sunGlow 2s ease-in 0s infinite normal forwards
-    &-orbital
+    &-orbitals
       position: absolute
       right: 0
       bottom: 0
-      transform: translate(50%, 60%)
+      width: 3300px
+      height: 3300px
+      z-index: 2
+      transform: translate(50%, 53%)
       line-height: 0
-      &-inner
+      img
         position: absolute
         top: 0
         left: 0
         width: 100%
-        height: 100%
-        will-change: transform
-      &._1
-        .fs-space-orbital
-          &-inner
-            animation: orbitalRotate 6s linear 0s infinite normal forwards
-      &._2
-        .fs-space-orbital
-          &-inner
-            animation: orbitalRotate 6s linear 0s infinite reverse forwards
-          &-star
-            position: absolute
-            top: 340px
-            left: 120px
-      &._3
-        .fs-space-orbital
-          &-inner
-            animation: orbitalRotate 6s linear 0s infinite reverse forwards
-          &-star
-            position: absolute
-            top: 540px
-            left: 84px
-      &._4
-        .fs-space-orbital
-          &-inner
-            animation: orbitalRotate 9s linear 0s infinite normal forwards
-          &-star
-            &._1
-              position: absolute
-              top: 210px
-              left: 360px
-            &._2
-              position: absolute
-              top: 500px
-              left: 120px
-          &-satellite
-            position: absolute
-            top: 650px
-            left: 25px
-      &._5
-        .fs-space-orbital
-          &-inner
-            animation: orbitalRotate 12s linear 0s infinite reverse forwards
-          &-star
-            position: absolute
-            top: 120px
-            left: 615px
-      &._6
-        .fs-space-orbital
-          &-inner
-            animation: orbitalRotate 12s linear 0s infinite normal forwards
-          &-star
-            position: absolute
-            top: 700px
-            left: 100px
-      &._7
-        .fs-space-orbital
-          &-inner
-            animation: orbitalRotate 6s linear 0s infinite reverse forwards
-          &-star
-            position: absolute
-            top: 401px
-            left: 376px
-      &._8
-        .fs-space-orbital
-          &-inner
-            animation: orbitalRotate 8s linear 0s infinite normal forwards
-          &-star
-            position: absolute
-            top: 620px
-            left: 275px
-      &-discord
-        position: absolute
-        top: -10px
-        left: 220px
-      &-tiktok
-        position: absolute
-        top: 150px
-        left: -20px
-      &-inst
-        position: absolute
-        top: -20px
-        left: 400px
-      &-earth
-        position: absolute
-        top: 150px
-        left: 200px
-      &-yt
-        position: absolute
-        top: 200px
-        left: 140px
-      &-whtsp
-        position: absolute
-        top: -40px
-        left: 420px
-      &-vbr
-        position: absolute
-        top: 60px
-        left: 450px
-      &-tlg
-        position: absolute
-        top: 290px
-        left: 160px
-      &-astr
-        position: absolute
-        top: 380px
-        left: 155px
+        animation: orbitalRotate 12s linear 0s infinite normal forwards
 
 @keyframes sunGlow
   0%
@@ -244,10 +140,8 @@
     box-shadow: 0px 0px 200px 300px rgba(#F8B22C, 0.2)
 
 @keyframes orbitalRotate
-  0%
-    transform: rotate(-60deg)
   100%
-    transform: rotate(90deg)
+    transform: rotate(360deg)
 
 @media ( max-width: 1200px )
   .fs
@@ -308,9 +202,6 @@
       top: 250px
       left: 200px
       transform: scale(0.8)
-      &-orbital
-        &._9, &._8, &._7
-          display: none
     &-inner
       width: 100%
       padding-top: 40px

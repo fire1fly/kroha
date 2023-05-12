@@ -1,0 +1,44 @@
+.bf
+  padding: 100px 30px 200px
+  &-container
+    margin: 0 auto
+    max-width: 910px
+  &-title
+    margin: 0
+  &-grid
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 60px 30px
+  &-art
+    &-preview
+      border-radius: 20px
+      height: 270px
+      overflow: hidden
+      img, svg
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: center center
+
+@media ( max-width: 1200px )
+  .bf
+    &-art
+      &-preview
+        height: 235px
+
+@media ( max-width: 991px )
+  .bf
+    padding: 200px 30px
+    &-art
+      &-preview
+        height: 210px
+
+@media ( max-width: 520px )
+  .bf
+    padding: 100px 20px
+    &-grid
+      grid-template-columns: 100%
+      gap: 50px
+    &-art
+      &-preview
+        height: 197px
