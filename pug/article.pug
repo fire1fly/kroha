@@ -1,0 +1,31 @@
+extends ./layouts/_common.pug
+
+block variables
+  -
+    var staticRoute = './assets/static/'
+    var pageTitle = 'Main'
+    var headerBordered = true
+    var footerTop = true
+    var footerBottom = true
+    var footerBg = true
+
+block prepend scripts
+  script(src="./js/swiper-bundle.min.js")
+  script(defer src="./js/accordion.js")
+  script(defer src="./js/close.js")
+  script(defer src="./js/sliders.js")
+  script(defer src="./js/tabs.js")
+  script(defer src="./js/temp_form.js")
+
+block prepend styles
+  link(rel="stylesheet", href="./css/swiper-bundle.min.css")
+
+block header
+  include ./components/header/_header.pug
+
+block content
+  main.main
+    include ./components/_article.pug
+
+block footer
+  include ./components/footer/_footer.pug

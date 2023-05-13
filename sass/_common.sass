@@ -1,6 +1,14 @@
 *
   box-sizing: border-box
   -webkit-tap-highlight-color: transparent
+  scrollbar-width: thin
+  scrollbar-color: $primary transparent
+  &::-webkit-scrollbar
+    width: 6px
+    height: 6px
+  &::-webkit-scrollbar-thumb
+    border-radius: 6px
+    background-color: $primary
 
 a
   color: inherit
@@ -407,6 +415,10 @@ input, textarea
         padding-right: 30px
 
 @media ( max-width: 520px )
+  *
+    &::-webkit-scrollbar
+      width: 3px
+      height: 3px
   ._sm
     &-mt
       &-5
