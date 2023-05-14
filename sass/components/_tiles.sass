@@ -1,0 +1,38 @@
+.tls
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  &-tile
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 60px 120px
+  &-title
+    background-color: #F0F8FF
+  &-desc
+    background: linear-gradient(90deg, #f2eef1 0%, #f1eff8 100%)
+
+@media ( max-width: 1200px )
+  .tls
+    &-tile
+      padding: 60px 30px
+
+@media ( max-width: 991px )
+  .tls
+    &-tile
+      padding: 30px
+    &-desc
+      background: linear-gradient(90deg, #F1F6F7 0%, #F2ECF1 100%)
+
+@media ( max-width: 520px )
+  .tls
+    grid-template-columns: 100%
+    padding: 80px 20px
+    background: #F0F8FF
+    &-tile
+      display: block
+    &-title
+      padding: 0
+      background-color: inherit
+    &-desc
+      padding: 0
+      background: inherit

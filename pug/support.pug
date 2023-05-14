@@ -1,0 +1,52 @@
+extends ./layouts/_common.pug
+
+block variables
+  -
+    var staticRoute = './assets/static/'
+    var pageTitle = 'Main'
+    var headerBordered = true
+    var footerTop = true
+    var footerBottom = true
+    var footerBg = true
+
+block prepend scripts
+  script(src="./js/swiper-bundle.min.js")
+  script(defer src="./js/accordion.js")
+  script(defer src="./js/close.js")
+  script(defer src="./js/sliders.js")
+  script(defer src="./js/tabs.js")
+  script(defer src="./js/temp_form.js")
+
+block prepend styles
+  link(rel="stylesheet", href="./css/swiper-bundle.min.css")
+
+block header
+  include ./components/header/_header.pug
+
+block content
+  main.main
+    .tls
+      .tls-title.tls-tile
+        .text2._fz-48._sm-fz-24._lh-1d3._text-black._text-bold Kroha support center
+      .tls-desc.tls-tile._sm-mt-20
+        .text._fz-20._sm-fz-14 Learn how to use Kroha and view answers to frequently asked questions.
+
+    .sp-container._pt-50._pb-200._sm-pb-100._px-30._sm-px-20
+      .sp-search._mx-auto
+        .form-block
+          .input-field
+            input.input(type="text")
+            btn.btn.btn-clear.sp-search-btn
+              img(src=staticRoute + "icon-zoom-grey.svg", alt=" search")
+            .input-label._bg-white Search
+          .input-output
+      .sp-spq._mt-50
+        include ./components/_support-questions.pug
+
+    include ./components/_info-cards.pug
+
+    .sp-container._py-200._sm-py-100._px-30._sm-px-20
+      include ./components/_faq.pug
+
+block footer
+  include ./components/footer/_footer.pug

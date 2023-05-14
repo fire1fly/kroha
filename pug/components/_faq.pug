@@ -1,0 +1,16 @@
+-
+  var faqList = ['Can I use  for free?', 'Do I have to pay for each device?', 'How can I cancel my subscription?', 'How can I cancel my subscription?']
+
+.fq
+  .fq-title.text2._fz-32._sm-fz-24._lh-1d3._text-black._text-bold._text-upper faq
+  .fq-inner.accordion.faq-accordion._mt-40
+    each item in faqList
+      .fq-item.accordion-item
+        .fq-item-h.accordion-header
+          .fq-item-title.text2._fz-24._sm-fz-18._lh-1d3._text-bold= item
+          .fq-item-arrow
+            img(src=staticRoute + "icon-arrow-down-grey.svg", alt="arrow")
+        .fq-item-b.accordion-body
+          .accordion-content.fq-item-b__inner
+            p Praesent diam felis, laoreet interdum porttitor nec, placerat et dolor.
+            p Donec quis massa sit amet nisl bibendum malesuada. Curabitur felis elit, vestibulum quis lectus in, bibendum bibendum mi.

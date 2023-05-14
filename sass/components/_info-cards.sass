@@ -1,0 +1,24 @@
+.ic
+  padding: 100px 30px
+  background-color: #F1EDF6
+  &-grid
+    max-width: 1380px
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    gap: 60px 30px
+  &-item
+    display: flex
+    flex-direction: column
+    &-link
+      margin-top: auto
+
+@media ( max-width: 991px )
+  .ic
+    &-grid
+      grid-template-columns: repeat(2, 1fr)
+
+@media ( max-width: 520px )
+  .ic
+    padding: 100px 20px
+    &-grid
+      grid-template-columns: 100%

@@ -1,0 +1,28 @@
+-
+  var supportQuestions = [
+    {title: 'Questions About Kroha', icon: 'icon-question-primary-2.svg'},
+    {title: 'Schedules, Daily Limits and Timer Features', icon: 'icon-clock-2.svg'},
+    {title: 'Features', icon: 'icon-app-primary.svg'},
+    {title: 'Troubleshooting', icon: 'icon-headphones-primary.svg'},
+    {title: 'Account & Subscription', icon: 'icon-user-primary.svg'},
+    {title: 'How do i activate advanced features', icon: 'icon-wallet-primary.svg'},
+    {title: 'Location Tracking', icon: 'icon-location-primary.svg'},
+    {title: 'Removing', icon: 'icon-close-circle.svg'},
+    {title: 'Modes and restrictions', icon: 'icon-settings-primary-2.svg'},
+  ]
+
+.spq
+  .spq-grid
+    each item in supportQuestions
+      .spq-item
+        .spq-icon
+          img(src=staticRoute + item.icon, alt="icon")
+        .spq-title.text2._fz-20._sm-fz-18._lh-1d3_text-darkblue._mt-20= item.title
+        .spq-list._mt-30._sm-mt-20
+          a.spq-list-item.text._fz-16._sm-fz-14._text-darkgrey(href="#") Lorem ipsum dolor sit amet?
+          a.spq-list-item.text._fz-16._sm-fz-14._text-darkgrey(href="#") Lorem ipsum?
+          a.spq-list-item.text._fz-16._sm-fz-14._text-darkgrey(href="#") Lorem ipsum dolor sit?
+          a.spq-list-item.text._fz-16._sm-fz-14._text-darkgrey(href="#") Lorem ipsum dolor sit amet ipsum dolor sit amet?
+        a._dif._align-center._gap-x-10._mt-40._sm-mt-30(href="#")
+            .text._fz-16._sm-fz-14._lh-1d5._text-primary Learn more
+            img(src=staticRoute + "icon-arrow-right-primary.svg", alt="icon")

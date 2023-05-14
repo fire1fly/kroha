@@ -1,0 +1,53 @@
+.fq
+  margin: 0 auto
+  max-width: 910px
+  &-item
+    border-top: 1px solid #E9EDF6
+    &:nth-last-of-type(1)
+      border-bottom: 1px solid #E9EDF6
+    &.accordion-item_show
+      .fq
+        &-item
+          &-title
+            color: $primary
+          &-arrow
+            transform: scale(1, -1)
+    &-h
+      padding: 16px 0
+      display: flex
+      align-items: center
+      justify-content: space-between
+      gap: 10px
+      cursor: pointer
+    &-title
+      color: $black
+      +transition(0.3s, color)
+    &-arrow
+      flex: 0 0 auto
+      +transition(0.3s, transform)
+      &:hover
+        transform: scale(1, -1)
+      img
+        width: 32px
+        height: 32px
+    &-b
+      &__inner
+        padding: 4px 0 40px
+      p
+        margin: 0
+        +opensans-reg
+        font-size: 20px
+        line-height: 1.3
+        color: $black
+        &:not(:nth-last-of-type(1))
+          margin-bottom: 30px
+
+@media ( max-width: 520px )
+  .fq
+    &-item
+      &-b
+        &__inner
+          p
+            font-size: 18px
+            &:not(:nth-last-of-type(1))
+              margin-bottom: 20px

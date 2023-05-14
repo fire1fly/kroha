@@ -1,5 +1,6 @@
 class Accordion {
   constructor(target, config) {
+    console.log(target);
     this._el = typeof target === 'string' ? document.querySelector(target) : target;
     const defaultConfig = {
       alwaysOpen: false,
@@ -83,6 +84,8 @@ class Accordion {
     el.classList.contains('accordion-item_show') ? this.hide(el) : this.show(el);
   }
 }
+
+const faqAccordion = new Accordion(".faq-accordion");
 
 const footerAccodrdionEl = document.querySelector(".f-nav.accordion");
 const footerAccordionBreakpoint = footerAccodrdionEl.dataset.accordionBreakpoint || "991";
