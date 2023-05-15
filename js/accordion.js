@@ -85,7 +85,10 @@ class Accordion {
   }
 }
 
-const faqAccordion = new Accordion(".faq-accordion");
+if (document.querySelector(".faq-accordion")) {
+  const faqAccordion = new Accordion(".faq-accordion");
+}
+
 
 const footerAccodrdionEl = document.querySelector(".f-nav.accordion");
 const footerAccordionBreakpoint = footerAccodrdionEl.dataset.accordionBreakpoint || "991";

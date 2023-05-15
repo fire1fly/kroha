@@ -1,0 +1,210 @@
+extends ./layouts/_common.pug
+
+block variables
+  -
+    var staticRoute = './assets/static/'
+    var pageTitle = 'Main'
+    var headerBordered = true
+    var footerTop = true
+    var footerBottom = true
+    var footerBg = true
+
+block prepend scripts
+  script(src="./js/swiper-bundle.min.js")
+  script(defer src="./js/accordion.js")
+  script(defer src="./js/close.js")
+  script(defer src="./js/sliders.js")
+  script(defer src="./js/tabs.js")
+  script(defer src="./js/temp_form.js")
+
+block prepend styles
+  link(rel="stylesheet", href="./css/swiper-bundle.min.css")
+
+block header
+  include ./components/header/_header.pug
+
+block content
+  main.main
+    .ssp-container
+      .breads
+        a.breads-item(href="#") Kroha support center
+        .breads-sep
+          img(src=staticRoute + "icon-arrow-right-grey-2.svg", alt="arrow")
+        a.breads-item(href="#") Questions About Kroha
+        .breads-sep
+          img(src=staticRoute + "icon-arrow-right-grey-2.svg", alt="arrow")
+        a.breads-item(href="#") Lorem ipsum dolor sit amet?
+    
+      .ssp-grid._mt-60._sm-mt-30
+        .ssp-content.artp-content
+          h1 Questions About Kroha
+          p Kroha powerful content blocking features ensure that your kids are protected from over 20 million inappropriate URLs and can see only the search results allowed by Google SafeSearch and Youtube restricted mode. You can also manually add sites to be blocked. 
+          p Kroha powerful content blocking features ensure that your kids are protected from over 20 million inappropriate URLs and can see only the search results allowed by Google SafeSearch and Youtube restricted mode. You can also manually add sites to be blocked. 
+
+          .ssp-mock-grid
+
+            .ssp-mock
+              .phm
+                .phm-mock
+                  img(src=staticRoute + "phone-mock-blue.svg", alt="mock")
+                .phm-content
+                  .pph-topbar._mb-10
+                    .pph-topbar-btn
+                      img(src=staticRoute + "icon-arrow-left-primary-2.svg", alt="icon")
+                    .pph-topbar-center
+                      .text2._fz-10._text-black._text-bold._text-center Звуки
+                    .pph-topbar-btn
+                      img(src=staticRoute + "icon-menu-notification.svg", alt="icon")
+
+                  .text._fz-7._text-darkgrey._text-center Ваш ребенок включил беззвучний режим и не слышит ваш звонок?
+                  .pph-box-feed._mt-5
+                    .pph-box._py-10._px-10
+                      ._df._justify-between._align-center._gap-x-10
+                        .text._fz-10._text-black._flex-grow-1 Режим “Не беспокоить”
+                        img._flex-shrink-0._w-30(src=staticRoute + "icon-switch-disabled.svg", alt="icon")
+                    .pph-box._py-10._px-10
+                      ._df._justify-between._align-center._gap-x-10
+                        .text._fz-10._text-black._flex-grow-1 Режим звонка
+                        img._flex-shrink-0._w-30(src=staticRoute + "icon-switch-disabled.svg", alt="icon")
+                    .pph-box._py-10._px-10
+                      ._df._justify-between._align-center._gap-x-10
+                        .text._fz-10._text-black._flex-shrink-50p Звонок (73%)
+                        div._flex-basis-50p._w-100p._flex-shrink-1._lh-0
+                          img._w-100p(src=staticRoute + "range-example-3.svg", alt="icon")
+                    .pph-box._py-10._px-10
+                      ._df._justify-between._align-center._gap-x-10
+                        .text._fz-10._text-black._flex-shrink-50p Будильник (60%)
+                        div._flex-basis-50p._w-100p._flex-shrink-1._lh-0
+                          img._w-100p(src=staticRoute + "range-example-4.svg", alt="icon")
+                    .pph-box._py-10._px-10
+                      ._df._justify-between._align-center._gap-x-10
+                        .text._fz-10._text-black._flex-shrink-50p Музика (53%)
+                        div._flex-basis-50p._w-100p._flex-shrink-1._lh-0
+                          img._w-100p(src=staticRoute + "range-example-5.svg", alt="icon")
+                  button.btn.btn-primary._w-100p._mt-10
+                    .btn-text Включить все звуки на максимум
+                  button.btn.btn-primary._w-100p._mt-10
+                    .btn-text._text-upper Найти телефон
+
+            .ssp-mock
+              .phm
+                .phm-mock
+                  img(src=staticRoute + "phone-mock-blue.svg", alt="mock")
+                .phm-content
+                  .pph-topbar._mb-10
+                    .pph-topbar-btn
+                      img(src=staticRoute + "icon-arrow-left-primary-2.svg", alt="icon")
+                    .pph-topbar-center
+                      .text2._fz-10._text-black._text-bold._text-center Статистика
+                    .pph-topbar-btn
+                      img(src=staticRoute + "icon-menu-notification.svg", alt="icon")
+
+                  .pph-box-feed
+                    .pph-box._py-10._px-10
+                      ._df._justify-between._align-center
+                        .text._fz-8._text-black Заряд батареи
+                        div._df._align-center._gap-x-10
+                          .text._fz-8._text-red 21%
+                          .pph-preview-small
+                            img(src=staticRoute + "icon-lowbattery-red.svg", alt="icon")
+                    .text._fz-7._text-center._text-darkgrey._my-10 Использованный трафик
+                    ._df._gap-x-5
+                      .pph-box._py-10._px-10._sm-py-10._flex-grow-1._inrow
+                        .text._fz-8._text-center._text-black Исходящий
+                        .text2._fz-8._text-center._text-primary._text-bold._mt-5 0 кб
+                      .pph-box._py-10._px-10._sm-py-10._flex-grow-1._inrow
+                        .text._fz-8._text-center._text-black Входящий
+                        .text2._fz-8._text-center._text-primary._text-bold._mt-5 0 кб
+                    .text._fz-7._text-center._text-darkgrey._my-10 Доступное место на диске
+                    .pph-box._py-10._px-10
+                      img._w-100p(src=staticRoute + "range-example-1.svg", alt="range")
+                      .text._fz-8._text-darkgrey._text-center._mt-5 16,54 Гб / 50,31 Гб
+            .ssp-mock
+              .phm
+                .phm-mock
+                  img(src=staticRoute + "phone-mock-blue.svg", alt="mock")
+                .phm-content
+                  .pph-topbar._mb-10
+                    .pph-topbar-btn
+                      img(src=staticRoute + "icon-arrow-left-primary-2.svg", alt="icon")
+                    .pph-topbar-center
+                      .text2._fz-10._text-black._text-bold._text-center Статистика
+                    .pph-topbar-btn
+                      img(src=staticRoute + "icon-menu-notification.svg", alt="icon")
+
+                  .pph-box-feed
+                    .pph-box._py-10._px-10
+                      ._df._justify-between._align-center
+                        .text._fz-8._text-black Заряд батареи
+                        div._df._align-center._gap-x-10
+                          .text._fz-8._text-red 21%
+                          .pph-preview-small
+                            img(src=staticRoute + "icon-lowbattery-red.svg", alt="icon")
+                    .text._fz-7._text-center._text-darkgrey._my-10 Использованный трафик
+                    ._df._gap-x-5
+                      .pph-box._py-10._px-10._sm-py-10._flex-grow-1._inrow
+                        .text._fz-8._text-center._text-black Исходящий
+                        .text2._fz-8._text-center._text-primary._text-bold._mt-5 0 кб
+                      .pph-box._py-10._px-10._sm-py-10._flex-grow-1._inrow
+                        .text._fz-8._text-center._text-black Входящий
+                        .text2._fz-8._text-center._text-primary._text-bold._mt-5 0 кб
+                    .text._fz-7._text-center._text-darkgrey._my-10 Доступное место на диске
+                    .pph-box._py-10._px-10
+                      img._w-100p(src=staticRoute + "range-example-1.svg", alt="range")
+                      .text._fz-8._text-darkgrey._text-center._mt-5 16,54 Гб / 50,31 Гб
+
+            
+
+          p Kroha powerful content blocking features ensure that your kids are protected from over 20 million inappropriate URLs and can see only the search results allowed by Google SafeSearch and Youtube restricted mode. You can also manually add sites to be blocked. 
+          p Kroha powerful content blocking features ensure that your kids are protected from over 20 million inappropriate URLs and can see only the search results allowed by Google SafeSearch and Youtube restricted mode. You can also manually add sites to be blocked. 
+
+          .ssp-mock-grid
+            .ssp-mock
+              .phm
+                .phm-mock
+                  img(src=staticRoute + "phone-mock-blue.svg", alt="mock")
+                .phm-content
+                  .pph-topbar._mb-10
+                    .pph-topbar-btn
+                      img(src=staticRoute + "icon-arrow-left-primary-2.svg", alt="icon")
+                    .pph-topbar-center
+                      .text2._fz-10._text-black._text-bold._text-center Статистика
+                    .pph-topbar-btn
+                      img(src=staticRoute + "icon-menu-notification.svg", alt="icon")
+
+                  .pph-box-feed
+                    .pph-box._py-10._px-10
+                      ._df._justify-between._align-center
+                        .text._fz-8._text-black Заряд батареи
+                        div._df._align-center._gap-x-10
+                          .text._fz-8._text-red 21%
+                          .pph-preview-small
+                            img(src=staticRoute + "icon-lowbattery-red.svg", alt="icon")
+                    .text._fz-7._text-center._text-darkgrey._my-10 Использованный трафик
+                    ._df._gap-x-5
+                      .pph-box._py-10._px-10._sm-py-10._flex-grow-1._inrow
+                        .text._fz-8._text-center._text-black Исходящий
+                        .text2._fz-8._text-center._text-primary._text-bold._mt-5 0 кб
+                      .pph-box._py-10._px-10._sm-py-10._flex-grow-1._inrow
+                        .text._fz-8._text-center._text-black Входящий
+                        .text2._fz-8._text-center._text-primary._text-bold._mt-5 0 кб
+                    .text._fz-7._text-center._text-darkgrey._my-10 Доступное место на диске
+                    .pph-box._py-10._px-10
+                      img._w-100p(src=staticRoute + "range-example-1.svg", alt="range")
+                      .text._fz-8._text-darkgrey._text-center._mt-5 16,54 Гб / 50,31 Гб
+
+          ul
+            li Nulla gravida hendrerit ipsum, fermentum gravida urna feugiat a. In vitae nunc nisi. Quisque accumsan ut nisl iaculis tempor. Phasellus quis sapien eu nunc tristique iaculis sed eget erat. Quisque fringilla faucibus tortor, vel pretium magna congue quis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+            li Nulla gravida hendrerit ipsum, fermentum gravida urna feugiat a.
+            li Nulla gravida hendrerit ipsum, fermentum gravida urna feugiat a. In vitae nunc nisi. Quisque accumsan ut nisl iaculis tempor. Phasellus quis sapien eu nunc tristique iaculis sed eget erat.
+            li Nulla gravida hendrerit ipsum, fermentum gravida urna feugiat a. In vitae nunc nisi.
+        .ssp-sidebar
+          h2.ssp-sidebar-title Related articles:
+          .ssp-sidebar-linklist._mt-30
+            a(href="#") Can I use  for free?
+            a(href="#") Do I have to pay for each device?
+            a(href="#") How can I cancel my?
+            a(href="#") How do I change?
+
+block footer
+  include ./components/footer/_footer.pug
