@@ -122,12 +122,14 @@
       z-index: 2
       transform: translate(50%, 53%)
       line-height: 0
+      &._animate
+        img
+          animation: orbitalRotate 12s linear 0s infinite normal forwards
       img
         position: absolute
         top: 0
         left: 0
         width: 100%
-        animation: orbitalRotate 12s linear 0s infinite normal forwards
 
 @keyframes sunGlow
   0%

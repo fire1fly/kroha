@@ -4039,13 +4039,15 @@ input, textarea {
           transform: translate(50%, 53%);
   line-height: 0;
 }
+.fs-space-orbitals._animate img {
+  -webkit-animation: orbitalRotate 12s linear 0s infinite normal forwards;
+          animation: orbitalRotate 12s linear 0s infinite normal forwards;
+}
 .fs-space-orbitals img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  -webkit-animation: orbitalRotate 12s linear 0s infinite normal forwards;
-          animation: orbitalRotate 12s linear 0s infinite normal forwards;
 }
 
 @-webkit-keyframes sunGlow {
