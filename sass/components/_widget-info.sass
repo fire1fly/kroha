@@ -3,13 +3,18 @@
   align-items: center
   justify-content: space-between
   gap: 30px
+  &._long
+    .winf
+      &-info
+        flex: 0 1 49%
+      &-widget
+        flex: 0 1 39%
   &-info
     flex: 0 1 440px
   &-widget
     position: relative
     flex: 0 0 345px
     border-radius: 10px
-    // box-shadow: 0px 0px 250px rgba(72, 123, 173, 0.15), inset 0px 0px 250px rgba(72, 123, 173, 0.1)
     &::after
       content: ''
       position: absolute
@@ -24,6 +29,11 @@
   .pph
     &-map
       height: 390px
+  &-video
+    border-radius: 20px
+    overflow: hidden
+    width: 100%
+    height: 248px
 
 @media ( max-width: 991px )
   .winf
@@ -32,6 +42,12 @@
 @media ( max-width: 768px )
   .winf
     flex-direction: column
+    &._long
+      .winf
+        &-info, &-widget
+          flex: auto
+        &-widget
+          max-width: none
     &-info
       flex: auto
       order: 1
@@ -39,9 +55,16 @@
       flex: auto
       max-width: 300px
       width: 100%
+    &-video
+      margin: 0 auto
+      max-width: 467px
+      width: 100%
+
 
 @media ( max-width: 520px )
   .winf
+    &-video
+      height: 180px
     .pph
       &-text
         font-size: 12px

@@ -1,0 +1,17 @@
+-
+  var supportQuestions = [
+    {title: 'USB Connection', icon: 'icon-connection-primary.svg', desc: 'You will need your child\'s device and a USB cable'},
+    {title: 'Security', icon: 'icon-security-primary.svg', desc: 'You will need to know your child\'s device passcode'},
+    {title: 'Reboot', icon: 'icon-settings-primary-2.svg', desc: 'Your child\'s iOS device may reboot but no content will be lost!'},
+    {title: 'Version', icon: 'icon-info-primary-2.svg', desc: 'Child devices need iOS 9.3.6+ or Android 7.0+.'},
+  ]
+
+.spq
+  .spq-title.text2._fz-40._sm-fz-32._lh-1d3._text-black._text-bold Learn more about Kroha Advanced:
+  .spq-grid._type-2._mt-50
+    each item in supportQuestions
+      .spq-item
+        .spq-icon
+          img(src=staticRoute + item.icon, alt="icon")
+        .spq-title.text2._fz-20._sm-fz-18._lh-1d3._text-darkblue._text-bold._mt-20= item.title
+        .sqp-desc.text._fz-16._sm-fz-14._text-darkgrey._mt-30._sm-mt-20= item.desc

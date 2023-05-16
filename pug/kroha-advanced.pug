@@ -27,35 +27,39 @@ block firstScreen
 
     .fs-grid
       .fs-grid-info
-        h1.fs-title App blocker feature
-        .text._text-darkgrey._sm-fz-14._mt-30._md-text-center Want to see the location of your kids on the map? Enable location tracking to make it easier to keep track of their whereabouts. Location tracking makes it easier to arrange pick-ups and provides peace of mind to parents everywhere.
+        h1.fs-title Kroha Advanced
+        .text._text-darkgrey._sm-fz-14._mt-30._md-text-center Pair your child’s device on your computer with Kroha Advanced and your child couldn’t delete apps or get around limitations.
         .fs-btnbar._mt-30._sm-mt-20
-          button.btn.btn-primary._rounded._text-upper.fs-btn(type="button") Renew license
-          button.btn.btn-play(type="button")
-            .btn-play-circle._1
-            .btn-play-circle._2
-            .btn-play-circle._3
+          button.btn.btn-white._gap-x-20.fs-btn(type="button")
             .btn-icon
-              img(src="./assets/static/icon-play-primary.svg", alt="play")
+              img(src=staticRoute + "icon-apple-black.svg", alt="icon")
+            .btn-text._text-darkgrey._sm-dn Download for Mac
+          button.btn.btn-white._gap-x-20.fs-btn(type="button")
+            .btn-icon
+              img(src=staticRoute + "icon-windows.svg", alt="icon")
+            .btn-text._text-darkgrey._sm-dn Download for Mac
+          
       .fs-grid-pic
-        img(src= staticRoute + 'feature-app-blocker-child-1.png', alt=pageTitle) 
-        // img(src= staticRoute + 'feature-app-blocker-child-2.png', alt=pageTitle)
-        // img(src= staticRoute + 'feature-app-blocker-child-3.png', alt=pageTitle)
+        img(src= staticRoute + 'kroha-advanced-child-1.png', alt=pageTitle) 
+        // img(src= staticRoute + 'kroha-advanced-child-2.png', alt=pageTitle)
+        // img(src= staticRoute + 'kroha-advanced-child-3.png', alt=pageTitle)
 
 block content
   main.main
+    ._py-200._sm-py-100._px-30._sm-px-20
+      .container
+        include ./components/_support-questions2.pug
 
-    .fp__inner
-      .fp-feed
-        .winf
+        .winf._long._mt-200._sm-mt-100
+          .winf-widget
+            .winf-video
+              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/u31qwQUeGuM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           .winf-info._md-mt-40
             .winf-title.text2._text-bold._text-black._fz-40._sm-fz-32 Filter bad web sites
             .winf-desc.text._sm-fz-16._text-darkgrey._mt-30._sm-mt-20 Kroha powerful content blocking features ensure that your kids are protected from over 20 million inappropriate URLs and can see only the search results allowed by Google SafeSearch and Youtube restricted mode. You can also manually add sites to be blocked. 
-          .winf-widget
-            
 
-
-    include ./components/_install.pug
+      ._mt-200._sm-mt-100
+        include ./components/_install2.pug
 
 block footer
   include ./components/footer/_footer.pug
