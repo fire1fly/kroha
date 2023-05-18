@@ -1,0 +1,44 @@
+extends ./layouts/_common.pug
+
+block variables
+  -
+    var staticRoute = './assets/static/'
+    var pageTitle = 'Activation success'
+    var headerBordered = true
+    var footerTop = true
+    var footerBottom = true
+    var footerBg = true
+
+block prepend scripts
+  script(src="./js/swiper-bundle.min.js")
+  script(defer src="./js/accordion.js")
+  script(defer src="./js/close.js")
+  script(defer src="./js/sliders.js")
+  script(defer src="./js/tabs.js")
+  script(defer src="./js/temp_form.js")
+
+block prepend styles
+  link(rel="stylesheet", href="./css/swiper-bundle.min.css")
+
+block header
+  include ./components/header/_header.pug
+
+block content
+  main.main
+
+    .pact
+      .pact-container
+        .pact-grid
+          .pact-pic
+            img(src=staticRoute + "activation-success-child-1.svg", alt="child")
+            // img(src=staticRoute + "activation-success-child-2.svg", alt="child")
+            // img(src=staticRoute + "activation-success-child-3.svg", alt="child")
+          .pact-form
+            form.pact-form__inner(action="#") 
+              h1.pact-form-title.text2._fz-32._sm-fz-24._lh-1d3._text-darkblue._text-bold._sm-text-center Thanks for the activation!
+              .text._fz-20._sm-fz-16._text-darkgrey._sm-text-center._mt-20 Your code has been accepted! Account extended. Download and open application for futhers use.
+              button.btn.btn-primary._rounded._px-10._w-100p._mt-40(type="button")
+                .btn-text._text-upper ok
+
+block footer
+  include ./components/footer/_footer.pug

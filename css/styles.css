@@ -6037,6 +6037,30 @@ input, textarea {
         -ms-flex-align: start;
             align-items: flex-start;
   }
+  .pact-form-f._sm-row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .pact-form-f._sm-row .pact-form-f-captcha {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+  }
+  .pact-form-f._sm-row .btn {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    width: 60px;
+    height: 60px;
+  }
   .pact-form-f-captcha {
     max-width: 230px;
     width: 100%;
