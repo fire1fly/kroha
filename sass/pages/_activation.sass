@@ -1,0 +1,59 @@
+.pact
+  &-grid
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+  &-pic
+    line-height: 0
+    height: 700px
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      object-position: left bottom
+  &-form
+    padding: 30px
+    display: flex
+    align-items: center
+    justify-content: center
+    &__inner
+      max-width: 440px
+      width: 100%
+    &-f
+      display: flex
+      align-items: center
+      gap: 30px
+      &-captcha
+        flex: 0 0 auto
+        width: 230px
+        line-height: 0
+        img, svg
+          width: 100%
+      .btn
+        flex: 1 1 auto
+
+@media ( max-width: 991px )
+  .pact
+    &-grid
+      grid-template-columns: 100%
+    &-pic
+      width: 100%
+      height: 480px
+    &-form
+      padding: 100px 30px
+      &__inner
+        max-width: 470px
+
+@media ( max-width: 520px )
+  .pact
+    &-pic
+      height: 225px
+    &-form
+      padding: 50px 20px
+      &-f
+        flex-direction: column
+        align-items: flex-start
+        &-captcha
+          max-width: 230px
+          width: 100%
+        .btn
+          width: 100%
