@@ -1,0 +1,69 @@
+extends ./layouts/_common.pug
+
+block variables
+  -
+    var staticRoute = './assets/static/'
+    var pageTitle = 'APK'
+    var headerBordered = true
+    var footerTop = true
+    var footerBottom = true
+    var footerBg = true
+
+block prepend scripts
+  script(src="./js/swiper-bundle.min.js")
+  script(defer src="./js/accordion.js")
+  script(defer src="./js/close.js")
+  script(defer src="./js/sliders.js")
+  script(defer src="./js/tabs.js")
+  script(defer src="./js/temp_form.js")
+
+block prepend styles
+  link(rel="stylesheet", href="./css/swiper-bundle.min.css")
+
+block header
+  include ./components/header/_header.pug
+
+block content
+  main.main
+    .tls
+      .tls-title.tls-tile
+        .text2._fz-48._sm-fz-24._lh-1d3._text-black._text-bold Download APK
+      .tls-desc.tls-tile._sm-mt-20
+        .text._fz-20._sm-fz-14 Download Parental Control Kroha for Android from our website
+
+    ._py-200._sm-py-100._px-30._sm-px-20
+      .container2
+        ._df._sm-flex-direction-column._gap-x-30._md-gap-x-20._sm-gap-y-40
+          ._flex-grow-1
+            .text2._fz-20._lh-1d3._text-darkblue._text-bold If you do not want to download APK file from our website, just go back to Google Play Market and install it from there.
+            a._dif._align-center._gap-x-10._mt-30(href="#")
+              .text._fz-16._sm-fz-14._lh-1d5._text-primary Go to Google Play
+              img(src=staticRoute + "icon-arrow-right-primary.svg", alt="icon")
+          ._flex-grow-1
+            .text2._fz-20._lh-1d3._text-darkblue._text-bold If you do not want to download APK file from our website, just go back to Google Play Market and install it from there.
+            a._dif._align-center._gap-x-10._mt-30(href="#")
+              .text._fz-16._sm-fz-14._lh-1d5._text-primary Go to Google Play
+              img(src=staticRoute + "icon-arrow-right-primary.svg", alt="icon")
+        ._mt-80._sm-mt-50
+          label._df._align-center._justify-center._gap-x-15._mt-30._cursor-pointer
+            .checkbox
+              input(type="checkbox")
+              .checkbox-check
+                img(src=staticRoute + "icon-check-white.svg", alt="check")
+            .text._fz-16._text-darkgrey I agree to the <a href="#" class="_text-primary">Parental Kroha Terms of Service of use</a>
+          ._df._justify-center._mt-30
+            btn.btn.btn-primary._rounded._px-20.papk__btn
+              .btn-text._text-upper download now
+
+    .is
+      .is-inner
+        h2.is-title.text2._fz-32._sm-fz-24._lh-1d3._text-black._text-bold We here to help
+        a._dif._align-center._gap-x-10(href="#")
+          img(src=staticRoute + "icon-help-circle-primary.svg", alt="icon")
+          .text._fz-16._sm-fz-14._lh-1d5._text-primary If you have a question click hee
+
+    .sp-container._pt-200._sm-pt-100
+      include ./components/_install.pug
+
+block footer
+  include ./components/footer/_footer.pug

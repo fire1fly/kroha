@@ -33,6 +33,10 @@ input, textarea
   margin: 0 auto
   max-width: 1145px
 
+.container2
+  margin: 0 auto
+  max-width: 910px
+
 ._text
   &-upper
     text-transform: uppercase
@@ -208,6 +212,8 @@ input, textarea
     margin-top: 50px
   &-60
     margin-top: 60px
+  &-80
+    margin-top: 80px
   &-100
     margin-top: 100px
   &-200
@@ -484,6 +490,29 @@ input, textarea
       &-30
         padding-left: 30px
         padding-right: 30px
+    &-gap
+      &-x
+        &-5
+          column-gap: 5px
+        &-10
+          column-gap: 10px
+        &-15
+          column-gap: 15px
+        &-20
+          column-gap: 20px
+        &-30
+          column-gap: 30px
+      &-y
+        &-5
+          row-gap: 5px
+        &-10
+          row-gap: 10px
+        &-15
+          row-gap: 15px
+        &-20
+          row-gap: 20px
+        &-30
+          row-gap: 30px
 
 @media ( max-width: 520px )
   *
@@ -540,6 +569,25 @@ input, textarea
       &-100
         padding-top: 100px
         padding-bottom: 100px
+    &-pt
+      &-5
+        padding-top: 5px
+      &-10
+        padding-top: 10px
+      &-15
+        padding-top: 15px
+      &-20
+        padding-top: 20px
+      &-30
+        padding-top: 30px
+      &-40
+        padding-top: 40px
+      &-50
+        padding-top: 50px
+      &-100
+        padding-top: 100px
+      &-200
+        padding-top: 200px
     &-pb
       &-5
         padding-bottom: 5px
@@ -611,6 +659,8 @@ input, textarea
           column-gap: 20px
         &-30
           column-gap: 30px
+        &-40
+          column-gap: 40px
       &-y
         &-10
           row-gap: 10px
@@ -620,6 +670,8 @@ input, textarea
           row-gap: 20px
         &-30
           row-gap: 30px
+        &-40
+          row-gap: 40px
     &-w
       &-100p
         width: 100%
@@ -646,3 +698,6 @@ input, textarea
         display: block
       &ib
         display: inline-block
+    &-flex-direction
+      &-column
+        flex-direction: column
