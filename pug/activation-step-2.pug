@@ -3,7 +3,7 @@ extends ./layouts/_common.pug
 block variables
   -
     var staticRoute = './assets/static/'
-    var pageTitle = 'Activation step 1'
+    var pageTitle = 'Activation step 2'
     var headerBordered = true
     var footerTop = true
     var footerBottom = true
@@ -36,17 +36,17 @@ block content
           .pact-form
             form.pact-form__inner(action="#") 
               h1.pact-form-title.text2._fz-32._sm-fz-24._lh-1d3._text-darkblue._text-bold._sm-text-center Activate Licence
-              .text._fz-20._sm-fz-16._text-darkgrey._sm-text-center._mt-20 Enter your email address to activate your subscription
+              .text._fz-20._sm-fz-16._text-darkgrey._sm-text-center._mt-20 Enter the code on the receipt to activate the licence 
               .form-block._mt-40
                 .input-field
                   input.input(type="text")
-                  .input-label._bg-white E-mail
+                  .input-label._bg-white Your activation code
                 .input-output
               .pact-form-f._mt-30
                 .pact-form-f-captcha
                   img(src=staticRoute + "captcha-example.png", alt="captcha")
                 button.btn.btn-primary._rounded._px-10(type="button")
-                  .btn-text._text-upper PROCEED
+                  .btn-text._text-upper ACTIVATE
 
     .sp-container._py-200._sm-pt-50._sm-pb-100._px-30._sm-px-20
       include ./components/_install3.pug
