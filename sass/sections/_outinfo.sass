@@ -17,8 +17,20 @@
       &-qr, &-link
         img
           max-width: 100%
+  &-installbar
+    .btn
+      padding: 8px 0
+      img
+        max-width: 80%
+        max-height: 100%
   &-bg
     flex: 0 1 320px
+
+@media ( max-width: 1200px )
+  .oi
+    &-installbar
+      .btn
+        height: 50px
 
 @media ( max-width: 991px )
   .oi
@@ -36,7 +48,13 @@
         &::-webkit-scrollbar
           width: 0
           height: 0
+    &-installbar
+      .btn
+        height: 40px
 
 @media ( max-width: 520px )
   .oi
     padding: 0 20px 100px
+    &-installbar
+      .btn
+        height: 55px

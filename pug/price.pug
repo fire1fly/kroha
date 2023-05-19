@@ -1,0 +1,50 @@
+extends ./layouts/_common.pug
+
+block variables
+  -
+    var staticRoute = './assets/static/'
+    var pageModificator = "fp"
+    var pageTitle = 'Price'
+    var firstScreen = true
+    var firstScreenClass = "ppr-fs fp-fs"
+    var footerTop = true
+    var footerBottom = true
+    var footerBg = true
+
+block prepend scripts
+  script(defer src="./js/accordion.js")
+
+block prepend styles
+  link(rel="stylesheet", href="./css/swiper-bundle.min.css")
+
+block header
+  include ./components/header/_header.pug
+block firstScreen
+  .fs
+    include ./components/_first-screen-orbitals.pug
+
+    .fs-grid
+      .fs-grid-info
+        h1.fs-title Choose the right Kroha
+        .text._text-darkgrey._sm-fz-14._mt-30._sm-mt-20 Premium plan for your family
+      .fs-grid-pic
+        img(src= staticRoute + 'price-child-1.svg', alt=pageTitle)
+        // img(src= staticRoute + 'price-child-2.svg', alt=pageTitle)
+        // img(src= staticRoute + 'price-child-3.svg', alt=pageTitle)
+
+      .ppr-fs-forward-line
+
+block content
+  main.main
+
+    .container._pt-30._px-30._sm-px-20
+      include ./components/_product-cards.pug
+
+    .container._pt-200._sm-pt-100._px-30._sm-px-20
+      include ./components/_install4.pug
+
+    .container._py-200._sm-py-100._px-30._sm-px-20
+      include ./components/_faq.pug
+
+block footer
+  include ./components/footer/_footer.pug

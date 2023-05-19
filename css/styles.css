@@ -3982,6 +3982,206 @@ input, textarea {
   font-size: 10px;
 }
 
+.pc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+.pc-card {
+  position: relative;
+  border-radius: 20px;
+  min-height: 440px;
+  padding: 35px 30px;
+  background: -o-linear-gradient(318deg, #E9EDF4 0%, #E8EDF7 100%);
+  background: linear-gradient(132deg, #E9EDF4 0%, #E8EDF7 100%);
+  overflow: hidden;
+  -webkit-transition: 0.3s -webkit-transform ease-in-out 0s;
+  transition: 0.3s -webkit-transform ease-in-out 0s;
+  -o-transition: 0.3s transform ease-in-out 0s;
+  transition: 0.3s transform ease-in-out 0s;
+  transition: 0.3s transform ease-in-out 0s, 0.3s -webkit-transform ease-in-out 0s;
+}
+.pc-card:hover {
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
+}
+.pc-card:hover .pc-card-bg {
+  opacity: 1;
+}
+.pc-card:hover .pc-card-period, .pc-card:hover .pc-card-price, .pc-card:hover .pc-card-devices .label, .pc-card:hover .pc-card-btn-buy .btn-text {
+  color: #FFFFFF;
+}
+.pc-card:hover .pc-card-btn-buy {
+  border-color: #FFFFFF;
+}
+.pc-card:hover .pc-card-devices .icon .hover-fill {
+  fill: #FFFFFF;
+}
+.pc-card-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  -webkit-transition: 0.3s opacity ease-in-out 0s;
+  -o-transition: 0.3s opacity ease-in-out 0s;
+  transition: 0.3s opacity ease-in-out 0s;
+}
+.pc-card-bg img, .pc-card-bg svg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+.pc-card-grid {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 15px;
+}
+.pc-card-period {
+  font-family: "Montserrat Alternates Regular";
+  font-weight: bold;
+  font-size: 24px;
+  color: #0F1622;
+  -webkit-transition: 0.3s color ease-in-out 0s;
+  -o-transition: 0.3s color ease-in-out 0s;
+  transition: 0.3s color ease-in-out 0s;
+}
+.pc-card-price {
+  font-family: "Montserrat Alternates Regular";
+  font-weight: bold;
+  color: #0F1622;
+  -webkit-transition: 0.3s color ease-in-out 0s;
+  -o-transition: 0.3s color ease-in-out 0s;
+  transition: 0.3s color ease-in-out 0s;
+}
+.pc-card-price .price {
+  font-size: 38px;
+}
+.pc-card-price .per {
+  font-size: 16px;
+}
+.pc-card-f {
+  width: 100%;
+}
+.pc-card-devices {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+}
+.pc-card-devices .icon {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+.pc-card-devices .icon .hover-fill {
+  fill: #0876E4;
+  -webkit-transition: 0.3s fill ease-in-out 0s;
+  -o-transition: 0.3s fill ease-in-out 0s;
+  transition: 0.3s fill ease-in-out 0s;
+}
+.pc-card-devices .label {
+  font-family: "Montserrat Alternates Regular";
+  font-size: 20px;
+  color: #0F1622;
+  -webkit-transition: 0.3s color ease-in-out 0s;
+  -o-transition: 0.3s color ease-in-out 0s;
+  transition: 0.3s color ease-in-out 0s;
+}
+.pc-card-btn-buy {
+  margin-top: 20px;
+  border: 2px solid #0F1622;
+  border-radius: 30px;
+  width: 100%;
+  height: 48px;
+  background-color: transparent;
+  -webkit-transition: 0.3s border-color ease-in-out 0s;
+  -o-transition: 0.3s border-color ease-in-out 0s;
+  transition: 0.3s border-color ease-in-out 0s;
+}
+.pc-card-btn-buy .btn-text {
+  font-family: "Open Sans Regular";
+  font-size: 16px;
+  color: #0F1622;
+  -webkit-transition: 0.3s color ease-in-out 0s;
+  -o-transition: 0.3s color ease-in-out 0s;
+  transition: 0.3s color ease-in-out 0s;
+}
+
+@media (max-width: 1200px) {
+  .pc-grid {
+    margin: 0 auto;
+    max-width: 964px;
+  }
+  .pc-card {
+    min-height: 370px;
+  }
+}
+@media (max-width: 991px) {
+  .pc-grid {
+    max-width: 710px;
+    gap: 25px;
+  }
+  .pc-card {
+    min-height: 275px;
+    padding: 20px;
+  }
+  .pc-card-period {
+    font-size: 18px;
+  }
+  .pc-card-price .price {
+    font-size: 28px;
+  }
+  .pc-card-price .per {
+    font-size: 12px;
+  }
+  .pc-card-devices .label {
+    font-size: 15px;
+  }
+  .pc-card-btn-buy {
+    height: 35px;
+  }
+  .pc-card-btn-buy .btn-text {
+    font-size: 12px;
+  }
+}
+@media (max-width: 768px) {
+  .pc-grid {
+    max-width: 450px;
+    grid-template-columns: 100%;
+    gap: 30px;
+  }
+  .pc-card {
+    min-height: 300px;
+    padding: 50px 30px;
+  }
+}
 .w1 {
   position: relative;
 }
@@ -4827,12 +5027,24 @@ input, textarea {
 .oi-link .qrlink-qr img, .oi-link .qrlink-link img {
   max-width: 100%;
 }
+.oi-installbar .btn {
+  padding: 8px 0;
+}
+.oi-installbar .btn img {
+  max-width: 80%;
+  max-height: 100%;
+}
 .oi-bg {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 320px;
           flex: 0 1 320px;
 }
 
+@media (max-width: 1200px) {
+  .oi-installbar .btn {
+    height: 50px;
+  }
+}
 @media (max-width: 991px) {
   .oi-inner {
     display: block;
@@ -4855,10 +5067,16 @@ input, textarea {
     width: 0;
     height: 0;
   }
+  .oi-installbar .btn {
+    height: 40px;
+  }
 }
 @media (max-width: 520px) {
   .oi {
     padding: 0 20px 100px;
+  }
+  .oi-installbar .btn {
+    height: 55px;
   }
 }
 .ps {
@@ -6071,5 +6289,96 @@ input, textarea {
   }
   .pact-form-f .btn {
     width: 100%;
+  }
+}
+.ppr-fs {
+  min-height: 756px;
+}
+.ppr-fs .fs {
+  padding-bottom: 0;
+}
+.ppr-fs .fs-grid {
+  height: 100%;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.ppr-fs .fs-grid-info {
+  padding-top: 60px;
+}
+.ppr-fs .fs-grid-pic {
+  -ms-flex-item-align: end;
+      align-self: end;
+  z-index: 6;
+}
+.ppr-fs-forward-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 167px;
+  background-color: #FFFFFF;
+  z-index: 5;
+}
+
+@media (max-width: 991px) {
+  .ppr-fs {
+    min-height: 550px;
+  }
+  .ppr-fs .fs-grid {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 0;
+  }
+  .ppr-fs .fs-grid-info {
+    padding-top: 0;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+  .ppr-fs .fs-grid-pic {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    -webkit-transform: translateY(40px);
+        -ms-transform: translateY(40px);
+            transform: translateY(40px);
+    max-width: 240px;
+  }
+  .ppr-fs .fs-title {
+    text-align: left;
+    font-size: 40px;
+  }
+  .ppr-fs-forward-line {
+    height: 110px;
+  }
+}
+@media (max-width: 520px) {
+  .ppr-fs {
+    min-height: auto;
+  }
+  .ppr-fs .fs-grid {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px;
+  }
+  .ppr-fs .fs-grid-pic {
+    -webkit-box-flex: 1;
+        -ms-flex: auto;
+            flex: auto;
+    max-width: 240px;
+    -webkit-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  .ppr-fs .fs-title {
+    font-size: 32px;
+  }
+  .ppr-fs-forward-line {
+    height: 104px;
   }
 }/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,137 @@
+.pc
+  &-grid
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 40px
+  &-card
+    position: relative
+    border-radius: 20px
+    min-height: 440px
+    padding: 35px 30px
+    +gradient-grey
+    overflow: hidden
+    +transition(0.3s, transform)
+    &:hover
+      transform: scale(1.05)
+      .pc-card
+        &-bg
+          opacity: 1
+        &-period, &-price, &-devices .label, &-btn-buy .btn-text
+          color: $white
+        &-btn-buy
+          border-color: $white
+        &-devices
+          .icon
+            .hover-fill
+              fill: $white
+    &-bg
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      z-index: 1
+      opacity: 0
+      +transition(0.3s, opacity)
+      img, svg
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: center center
+    &-grid
+      position: relative
+      z-index: 2
+      height: 100%
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: space-between
+      gap: 15px
+    &-period
+      +monts-reg
+      font-weight: bold
+      font-size: 24px
+      color: $black
+      +transition(0.3s, color)
+    &-price
+      +monts-reg
+      font-weight: bold
+      color: $black
+      +transition(0.3s, color)
+      .price
+        font-size: 38px
+      .per
+        font-size: 16px
+    &-f
+      width: 100%
+    &-devices
+      display: flex
+      align-items: center
+      justify-content: center
+      gap: 10px
+      .icon
+        flex: 0 0 auto
+        .hover-fill
+          fill: $primary
+          +transition(0.3s, fill)
+      .label
+        +monts-reg
+        font-size: 20px
+        color: $black
+        +transition(0.3s, color)
+    &-btn
+      &-buy
+        margin-top: 20px
+        border: 2px solid $black
+        border-radius: 30px
+        width: 100%
+        height: 48px
+        background-color: transparent
+        +transition(0.3s, border-color)
+        .btn-text
+          +opensans-reg
+          font-size: 16px
+          color: $black
+          +transition(0.3s, color)
+
+@media ( max-width: 1200px )
+  .pc
+    &-grid
+      margin: 0 auto
+      max-width: 964px
+    &-card
+      min-height: 370px
+
+@media ( max-width: 991px )
+  .pc
+    &-grid
+      max-width: 710px
+      gap: 25px
+    &-card
+      min-height: 275px
+      padding: 20px
+      &-period
+        font-size: 18px
+      &-price
+        .price
+          font-size: 28px
+        .per
+          font-size: 12px
+      &-devices
+        .label
+          font-size: 15px
+      &-btn
+        &-buy
+          height: 35px
+          .btn-text
+            font-size: 12px
+
+@media ( max-width: 768px )
+  .pc
+    &-grid
+      max-width: 450px
+      grid-template-columns: 100%
+      gap: 30px
+    &-card
+      min-height: 300px
+      padding: 50px 30px
