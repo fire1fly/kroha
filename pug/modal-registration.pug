@@ -1,0 +1,56 @@
+extends ./layouts/_common.pug
+
+block variables
+  -
+    var staticRoute = './assets/static/'
+    var pageModificator = "fp"
+    var pageTitle = 'Modal Registration'
+    var firstScreen = true
+    var firstScreenClass = "mp-fs fp-fs"
+    var footerTop = true
+    var footerBottom = true
+    var footerBg = true
+    var bodyNoScroll = true
+
+block prepend scripts
+  script(defer src="./js/accordion.js")
+  script(defer src="./js/modal.js")
+  script(defer src="./js/temp_form.js")
+
+block prepend styles
+  link(rel="stylesheet", href="./css/swiper-bundle.min.css")
+
+block header
+  include ./components/header/_header.pug
+block firstScreen
+  .fs
+    include ./components/_first-screen-orbitals.pug
+
+    .fs-grid
+      .fs-grid-info
+        h1.fs-title App blocker feature
+        .text._text-darkgrey._sm-fz-14._mt-30._md-text-center Want to see the location of your kids on the map? Enable location tracking to make it easier to keep track of their whereabouts. Location tracking makes it easier to arrange pick-ups and provides peace of mind to parents everywhere.
+        .fs-btnbar._mt-30._sm-mt-20
+          button.btn.btn-primary._rounded._text-upper.fs-btn(type="button") Renew license
+          button.btn.btn-play(type="button")
+            .btn-play-circle._1
+            .btn-play-circle._2
+            .btn-play-circle._3
+            .btn-icon
+              img(src="./assets/static/icon-play-primary.svg", alt="play")
+      .fs-grid-pic
+        img(src= staticRoute + 'feature-app-blocker-child-1.png', alt=pageTitle) 
+        // img(src= staticRoute + 'feature-app-blocker-child-2.png', alt=pageTitle)
+        // img(src= staticRoute + 'feature-app-blocker-child-3.png', alt=pageTitle)
+
+      .ppr-fs-forward-line
+
+block content
+  main.main
+
+  .py-200
+
+block footer
+  include ./components/footer/_footer.pug
+
+  include ./components/_modal-registration.pug

@@ -94,7 +94,6 @@ function handleOutsideClick(e) {
 }
 
 function initMenu() {
-  console.log("init header menu");
   menuBtnEl && menuBtnEl.addEventListener("click", toggleMenu);
 }
 
@@ -107,7 +106,6 @@ function handleMenu(e) {
     initMenu();
   } else {
     resetMenu();
-    console.log("header menu not avaliable");
   }
 }
 

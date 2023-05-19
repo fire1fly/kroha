@@ -1,6 +1,5 @@
 class Accordion {
   constructor(target, config) {
-    console.log(target);
     this._el = typeof target === 'string' ? document.querySelector(target) : target;
     const defaultConfig = {
       alwaysOpen: false,
@@ -98,10 +97,8 @@ let footerAccodrdion = null;
 function handleFooterAccodrion(e) {
   if (e.matches) {
     footerAccodrdion = new Accordion(footerAccodrdionEl);
-    console.log("INIT");
   } else {
     footerAccodrdion && footerAccodrdion.removeEventListener();
-    console.log("DESTROY");
   }
 }
 

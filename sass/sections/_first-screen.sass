@@ -81,6 +81,13 @@
     display: flex
     align-items: center
     gap: 20px
+    &._fixed
+      position: fixed
+      bottom: 0
+      left: 0
+      margin: 0
+      width: 100%
+      padding: 20px
     &-btn
       border-radius: 22px
       height: 44px
@@ -197,9 +204,18 @@
 
 @media ( max-width: 520px )
   .fs
-    padding-bottom: 20px
+    padding-bottom: 60px
     &-wrapper
       min-height: 720px
+      &._fullscreen
+        min-height: auto
+        height: 100vh
+        .fs
+          height: calc(100% - 109px)
+          &-inner
+            height: 100%
+          &__socbar
+            margin-top: auto
     &-space
       top: 250px
       left: 200px

@@ -1,0 +1,44 @@
+.m__wrapper.active
+  .m
+    .m-btn-close.m-close
+      img(src=staticRoute + "icon-close-black.svg", alt="close modal")
+    .m-h
+      .m-title.text2._fz-28._sm-fz-20._text-darkblue._text-bold Enter the code on the receipt to activate the license
+      form.m-form._mt-40._sm-mt-20(action="#") 
+        .m-form-row
+          .form-block.m-form-row-field
+            .input-field
+              input.input(type="text")
+              .input-label._bg-white Your activation code
+            .input-output
+          button.m-btn.m-form-row-btn.btn.btn-primary._rounded._px-10(type="button")
+            .btn-text Buy now!
+
+        .rls._my-30._sm-my-20._gap-x-10
+          .rls-line
+          .rls-label.text2._fz-20._text-black._text-bold or
+          .rls-line
+
+        .text2._fz-16._text-black._text-center._text-bold Select a Payment Method
+        .m-form-pay-grid._mt-30._sm-mt-20
+          label._df._align-center._justify-center._gap-x-20._cursor-pointer
+            .checkbox
+              input(type="checkbox")
+              .checkbox-check
+                img(src=staticRoute + "icon-check-white.svg", alt="check")
+            .m-form-pay
+              img(src=staticRoute + "icon-liqpay.svg", alt="liqpay")
+          label._df._align-center._justify-center._gap-x-20._cursor-pointer
+            .checkbox
+              input(type="checkbox")
+              .checkbox-check
+                img(src=staticRoute + "icon-check-white.svg", alt="check")
+            .m-form-pay
+              img(src=staticRoute + "icon-paypal.svg", alt="paypal")
+
+        .m-form-f._mt-30._sm-mt-20
+          .m-form-captcha
+            img(src=staticRoute + "captcha-example.png", alt="captcha")
+          button.m-btn.btn.btn-primary._rounded(type="button")
+            .btn-text PAY
+

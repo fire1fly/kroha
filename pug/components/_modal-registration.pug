@@ -1,0 +1,34 @@
+.m__wrapper.active
+  .m
+    .m-btn-close.m-close
+      img(src=staticRoute + "icon-close-black.svg", alt="close modal")
+    .m-h
+      .m-title.text2._fz-28._sm-fz-20._text-darkblue._text-bold Registration
+      .text._fz-20._sm-fz-16._text-darkgrey._mt-20._sm-mt-10 It will take few minutes
+      form.m-form._mt-40._sm-mt-20(action="#")
+        .form-block
+          .input-field
+            input.input(type="email")
+            .input-label._bg-white E-mail
+          .input-output
+        .form-block
+          .input-field
+            input.input(type="text")
+            .input-label._bg-white Name
+          .input-output
+        .form-block
+          .input-field
+            input.input(type="password")
+            .input-label._bg-white Password
+          .input-output
+        .form-block
+          .input-field
+            input.input(type="password")
+            .input-label._bg-white Password confirmation
+          .input-output
+        .m-form-f._mt-30._sm-mt-10
+          .m-form-captcha
+            img(src=staticRoute + "captcha-example.png", alt="captcha")
+          button.m-btn.btn.btn-primary._rounded(type="button")
+            .btn-text Register
+

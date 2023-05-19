@@ -17,7 +17,7 @@ html(lang="en")
 
     title Kroha - #{pageTitle}
 
-  body
+  body(class=bodyNoScroll && '_scroll-lock-y')
     #root
       .page(class=pageModificator)
         if (firstScreen)
